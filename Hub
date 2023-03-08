@@ -78,6 +78,7 @@ local function QJKN_fake_script() -- MainLoad.Main
 		else
 			lt.Text = "Game not supported!"
 			lt.TextColor3 = Color3.new(1, 0.203922, 0.215686)
+			script.Parent.Parent:Destroy()
 		end
 	end)
 end
