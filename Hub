@@ -49,7 +49,7 @@ LT.TextTransparency = 1.000
 
 -- Scripts:
 
-local function XUOKZE_fake_script() -- MainLoad.Main 
+local function QJKN_fake_script() -- MainLoad.Main 
 	local script = Instance.new('LocalScript', MainLoad)
 
 	--anim
@@ -74,7 +74,11 @@ local function XUOKZE_fake_script() -- MainLoad.Main
 			lt.Text = "Game found:"..game.Name
 			wait(1)
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/MBP0/MBHub/main/games/beeswarmsimulator"))()
+			script.Parent.Parent:Destroy()
+		else
+			lt.Text = "Game not supported!"
+			lt.TextColor3 = Color3.new(1, 0.203922, 0.215686)
 		end
 	end)
 end
-coroutine.wrap(XUOKZE_fake_script)()
+coroutine.wrap(QJKN_fake_script)()
