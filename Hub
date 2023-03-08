@@ -1,0 +1,189 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Load = Instance.new("ScreenGui")
+local MainLoad = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Logo = Instance.new("ImageLabel")
+local LT = Instance.new("TextLabel")
+local Tweens = Instance.new("Folder")
+
+--Properties:
+
+Load.Name = "Load"
+Load.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Load.Enabled = false
+Load.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+MainLoad.Name = "MainLoad"
+MainLoad.Parent = Load
+MainLoad.AnchorPoint = Vector2.new(0.5, 0.5)
+MainLoad.BackgroundColor3 = Color3.fromRGB(58, 58, 58)
+MainLoad.BackgroundTransparency = 1.000
+MainLoad.Position = UDim2.new(0.5, 0, 0.5, 0)
+MainLoad.Size = UDim2.new(0, 459, 0, 197)
+
+UICorner.CornerRadius = UDim.new(0, 20)
+UICorner.Parent = MainLoad
+
+Logo.Name = "Logo"
+Logo.Parent = MainLoad
+Logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Logo.BackgroundTransparency = 1.000
+Logo.Position = UDim2.new(0.106753811, 0, -0.131979689, 0)
+Logo.Size = UDim2.new(0, 361, 0, 248)
+Logo.Image = "http://www.roblox.com/asset/?id=12690353884"
+Logo.ImageTransparency = 1.000
+
+LT.Name = "LT"
+LT.Parent = MainLoad
+LT.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LT.BackgroundTransparency = 1.000
+LT.Position = UDim2.new(0.281045765, 0, 0.786802053, 0)
+LT.Size = UDim2.new(0, 200, 0, 30)
+LT.Font = Enum.Font.Gotham
+LT.Text = "Loading please wait"
+LT.TextColor3 = Color3.fromRGB(171, 171, 171)
+LT.TextSize = 16.000
+LT.TextTransparency = 1.000
+
+Tweens.Name = "Tweens"
+Tweens.Parent = game.StarterGui.Load.MainLoad.Animator
+
+-- Module Scripts:
+
+local fake_module_scripts = {}
+
+do -- MainLoad.Animator
+	local script = Instance.new('ModuleScript', MainLoad)
+	script.Name = "Animator"
+	local function module_script()
+		--[[
+			TweenSequence Editor Animator
+			Created by pa00
+		
+			Initialize by requiring this module:
+				animator = require(instance.Animator)
+		
+			Play the tween named TrackName:
+				animator.TrackName:Play()
+		
+			Stop the tween named TrackName:
+				animator.TrackName:Stop()
+		
+			Loop the tween named TrackName twice:
+				animator.TrackName:Loop(2)
+		
+			Loop the tween named TrackName indefinitely until stopped:
+				animator.TrackName:Loop()
+			
+			Set the origin of a track named TrackName:
+				animator.TrackName:SetOrigin(origin)
+		
+			Connect a function named doneFunc to the end of the tween named TrackName:
+				animator.TrackName.Completed:Connect(doneFunc)
+				
+			Set the origin of all tracks:
+				animator:SetOrigin(origin)
+		
+			Stop all tracks for this instance (either version):
+				animator.StopAll()
+				animator:StopAll()
+		]]
+		
+		local CollectionService = game:GetService("CollectionService")
+		local TweenSequenceUtils = CollectionService:GetTagged("Instance(TweenSequenceUtils)")[1]
+		local Animator = require(TweenSequenceUtils.Animator)
+		
+		local tweens = script:WaitForChild("Tweens")
+		local root = script.Parent
+		return Animator.new(tweens, root)
+		
+	end
+	fake_module_scripts[script] = module_script
+end
+do -- Tweens.Load1
+	local script = Instance.new('ModuleScript', Tweens)
+	script.Name = "Load1"
+	local function module_script()
+		return {
+			["MainLoad"] = {
+				BackgroundTransparency = {
+					InitialValue = 1,
+					Keyframes = {
+						{
+							Value = 0,
+							EasingStyle = Enum.EasingStyle.Quad,
+							Time = 1,
+							EasingDirection = Enum.EasingDirection.Out,
+						},
+					},
+				},
+			},
+			["Root.Logo"] = {
+				ImageTransparency = {
+					InitialValue = 1,
+					Keyframes = {
+						{
+							Value = 0,
+							EasingStyle = Enum.EasingStyle.Quad,
+							Time = 1,
+							EasingDirection = Enum.EasingDirection.Out,
+						},
+					},
+				},
+			},
+			["Root.LT"] = {
+				TextTransparency = {
+					InitialValue = 1,
+					Keyframes = {
+						{
+							Value = 1,
+							EasingStyle = Enum.EasingStyle.Quad,
+							Time = 1,
+							EasingDirection = Enum.EasingDirection.Out,
+						},
+						{
+							Value = 0,
+							EasingStyle = Enum.EasingStyle.Quad,
+							Time = 1.5,
+							EasingDirection = Enum.EasingDirection.Out,
+						},
+					},
+				},
+			},
+		}
+		
+	end
+	fake_module_scripts[script] = module_script
+end
+
+
+-- Scripts:
+
+local function BEGL_fake_script() -- MainLoad.Main 
+	local script = Instance.new('LocalScript', MainLoad)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
+
+	local a = require(script.Parent.Animator)
+	a.Load1:Play()
+	--games
+	local bss = 1537690962
+	a.Load1.Completed:Connect(function()
+		
+		
+		if game.GameId == bss then --bee swarm
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/MBP0/MBHub/main/games/beeswarmsimulator"))()
+		end
+	end)
+end
+coroutine.wrap(BEGL_fake_script)()
