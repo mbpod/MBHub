@@ -50,7 +50,7 @@ LT.TextSize = 16.000
 LT.TextTransparency = 1.000
 
 Tweens.Name = "Tweens"
-Tweens.Parent = game.StarterGui.Load.MainLoad.Animator
+Tweens.Parent = Load.MainLoad.Animator
 
 -- Module Scripts:
 
