@@ -4,7 +4,6 @@
 -- Instances:
 
 local BeeSS = Instance.new("ScreenGui")
-local Tweens = Instance.new("Folder")
 local Bar = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
 local Flatten = Instance.new("Frame")
@@ -22,23 +21,30 @@ local MainScroll = Instance.new("ScrollingFrame")
 local Unload = Instance.new("TextButton")
 local UICorner_5 = Instance.new("UICorner")
 local C = Instance.new("ImageButton")
+local FarmTab = Instance.new("Folder")
+local MainScroll_2 = Instance.new("ScrollingFrame")
+local q = Instance.new("Frame")
+local qq = Instance.new("TextLabel")
+local FSnail = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local C_2 = Instance.new("ImageButton")
+local Indicator = Instance.new("Frame")
+local UICorner_7 = Instance.new("UICorner")
 local BarShadow = Instance.new("ImageLabel")
 
 --Properties:
 
 BeeSS.Name = "BeeSS"
 BeeSS.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+BeeSS.Enabled = false
 BeeSS.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 BeeSS.ResetOnSpawn = false
-
-Tweens.Name = "Tweens"
-Tweens.Parent = game.StarterGui.BeeSS.Animator
 
 Bar.Name = "Bar"
 Bar.Parent = BeeSS
 Bar.AnchorPoint = Vector2.new(0.5, 0.5)
 Bar.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-Bar.Position = UDim2.new(0.5, 0, 1.20000005, 0)
+Bar.Position = UDim2.new(0.5, 0, 0.307000011, 0)
 Bar.Size = UDim2.new(0, 608, 0, 33)
 Bar.ZIndex = 2
 
@@ -133,6 +139,7 @@ MainScroll.BackgroundTransparency = 1.000
 MainScroll.BorderSizePixel = 0
 MainScroll.Position = UDim2.new(0.00999999978, 0, 0.259780824, 0)
 MainScroll.Size = UDim2.new(0, 595, 0, 208)
+MainScroll.Visible = false
 MainScroll.CanvasSize = UDim2.new(0, 0, 3, 0)
 MainScroll.ScrollBarThickness = 5
 
@@ -162,6 +169,73 @@ C.Image = "rbxassetid://3926305904"
 C.ImageRectOffset = Vector2.new(164, 844)
 C.ImageRectSize = Vector2.new(36, 36)
 
+FarmTab.Name = "FarmTab"
+FarmTab.Parent = MainBack
+
+MainScroll_2.Name = "MainScroll"
+MainScroll_2.Parent = FarmTab
+MainScroll_2.Active = true
+MainScroll_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MainScroll_2.BackgroundTransparency = 1.000
+MainScroll_2.BorderSizePixel = 0
+MainScroll_2.Position = UDim2.new(0.00999999978, 0, 0.259780824, 0)
+MainScroll_2.Size = UDim2.new(0, 595, 0, 208)
+MainScroll_2.CanvasSize = UDim2.new(0, 0, 3, 0)
+MainScroll_2.ScrollBarThickness = 5
+
+q.Name = "q"
+q.Parent = MainScroll_2
+q.BackgroundColor3 = Color3.fromRGB(167, 167, 167)
+q.BorderSizePixel = 0
+q.Position = UDim2.new(0.0200840347, 0, 0.00999999978, 0)
+q.Size = UDim2.new(0, 570, 0, 1)
+
+qq.Name = "qq"
+qq.Parent = q
+qq.BackgroundColor3 = Color3.fromRGB(58, 58, 58)
+qq.BorderSizePixel = 0
+qq.Position = UDim2.new(0.463157892, 0, -12, 0)
+qq.Size = UDim2.new(0, 42, 0, 24)
+qq.Font = Enum.Font.SourceSans
+qq.Text = "Mobs"
+qq.TextColor3 = Color3.fromRGB(168, 168, 168)
+qq.TextSize = 14.000
+
+FSnail.Name = "FSnail"
+FSnail.Parent = MainScroll_2
+FSnail.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
+FSnail.Position = UDim2.new(0.0252100844, 0, 0.0288461559, 0)
+FSnail.Size = UDim2.new(0, 565, 0, 40)
+FSnail.ZIndex = 2
+FSnail.Font = Enum.Font.Gotham
+FSnail.Text = "Farm Snail"
+FSnail.TextColor3 = Color3.fromRGB(255, 255, 255)
+FSnail.TextSize = 15.000
+
+UICorner_6.CornerRadius = UDim.new(0, 9)
+UICorner_6.Parent = FSnail
+
+C_2.Name = "C"
+C_2.Parent = FSnail
+C_2.AnchorPoint = Vector2.new(1, 0)
+C_2.BackgroundTransparency = 1.000
+C_2.LayoutOrder = 5
+C_2.Position = UDim2.new(0.988495588, 0, 0.175000012, 0)
+C_2.Size = UDim2.new(0, 25, 0, 25)
+C_2.ZIndex = 2
+C_2.Image = "rbxassetid://3926305904"
+C_2.ImageRectOffset = Vector2.new(164, 844)
+C_2.ImageRectSize = Vector2.new(36, 36)
+
+Indicator.Name = "Indicator"
+Indicator.Parent = FSnail
+Indicator.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Indicator.Position = UDim2.new(0, 10, 0.300000012, 0)
+Indicator.Size = UDim2.new(0, 15, 0, 15)
+
+UICorner_7.CornerRadius = UDim.new(10, 10)
+UICorner_7.Parent = Indicator
+
 BarShadow.Name = "BarShadow"
 BarShadow.Parent = Bar
 BarShadow.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -171,102 +245,11 @@ BarShadow.Size = UDim2.new(0, 617, 0, 68)
 BarShadow.Visible = false
 BarShadow.Image = "http://www.roblox.com/asset/?id=12690998990"
 
--- Module Scripts:
-
-local fake_module_scripts = {}
-
-do -- BeeSS.Animator
-	local script = Instance.new('ModuleScript', BeeSS)
-	script.Name = "Animator"
-	local function module_script()
-		--[[
-			TweenSequence Editor Animator
-			Created by pa00
-		
-			Initialize by requiring this module:
-				animator = require(instance.Animator)
-		
-			Play the tween named TrackName:
-				animator.TrackName:Play()
-		
-			Stop the tween named TrackName:
-				animator.TrackName:Stop()
-		
-			Loop the tween named TrackName twice:
-				animator.TrackName:Loop(2)
-		
-			Loop the tween named TrackName indefinitely until stopped:
-				animator.TrackName:Loop()
-			
-			Set the origin of a track named TrackName:
-				animator.TrackName:SetOrigin(origin)
-		
-			Connect a function named doneFunc to the end of the tween named TrackName:
-				animator.TrackName.Completed:Connect(doneFunc)
-				
-			Set the origin of all tracks:
-				animator:SetOrigin(origin)
-		
-			Stop all tracks for this instance (either version):
-				animator.StopAll()
-				animator:StopAll()
-		]]
-		
-		local CollectionService = game:GetService("CollectionService")
-		local TweenSequenceUtils = CollectionService:GetTagged("Instance(TweenSequenceUtils)")[1]
-		local Animator = require(TweenSequenceUtils.Animator)
-		
-		local tweens = script:WaitForChild("Tweens")
-		local root = script.Parent
-		return Animator.new(tweens, root)
-		
-	end
-	fake_module_scripts[script] = module_script
-end
-do -- Tweens.In
-	local script = Instance.new('ModuleScript', Tweens)
-	script.Name = "In"
-	local function module_script()
-		return {
-			["Root.Bar"] = {
-				Position = {
-					InitialValue = UDim2.new(0.5, 0, 1.2000000476837158, 0),
-					Keyframes = {
-						{
-							Value = UDim2.new(0.5, 0, 0.3070000410079956, 0),
-							EasingStyle = Enum.EasingStyle.Quint,
-							Time = 1.5,
-							EasingDirection = Enum.EasingDirection.Out,
-						},
-					},
-				},
-			},
-		}
-		
-	end
-	fake_module_scripts[script] = module_script
-end
-
-
 -- Scripts:
 
-local function YSRVDG_fake_script() -- BeeSS.Main 
+local function ZATJ_fake_script() -- BeeSS.Main 
 	local script = Instance.new('LocalScript', BeeSS)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
 
-	--lanim
-	local a = require(script.Parent.Animator)
-	script.Parent.Parent.Load:Destroy()
-	wait(5)
-	a.In:Play()
-	
 	--toggle
 	local uis = game:GetService("UserInputService")
 	uis.InputBegan:Connect(function(q)
@@ -279,17 +262,9 @@ local function YSRVDG_fake_script() -- BeeSS.Main
 		end
 	end)
 end
-coroutine.wrap(YSRVDG_fake_script)()
-local function XVGHYIO_fake_script() -- Unload.UnloadS 
+coroutine.wrap(ZATJ_fake_script)()
+local function TZMUWH_fake_script() -- Unload.UnloadS 
 	local script = Instance.new('LocalScript', Unload)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
 
 	local button = script.Parent
 	
@@ -297,17 +272,38 @@ local function XVGHYIO_fake_script() -- Unload.UnloadS
 		button.Parent.Parent.Parent.Parent.Parent:Destroy()
 	end)
 end
-coroutine.wrap(XVGHYIO_fake_script)()
-local function XTGS_fake_script() -- Bar.Drag 
-	local script = Instance.new('LocalScript', Bar)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
+coroutine.wrap(TZMUWH_fake_script)()
+local function WKJDPPX_fake_script() -- MainBack.TabSwitch 
+	local script = Instance.new('LocalScript', MainBack)
+
+	--Info
+	local InfoB = script.Parent.Tabs.Info
+	local InfoT = script.Parent.InfoTab
+	--Farm
+	local FarmB = script.Parent.Tabs.Farm
+	local FarmT = script.Parent.FarmTab
+	
+	
+	
+	--Info Function
+	local function i()
+		InfoT.MainScroll.Visible = true
+		FarmT.MainScroll.Visible = false
 	end
+	
+	--Farm Function
+	local function f()
+		InfoT.MainScroll.Visible = false
+		FarmT.MainScroll.Visible = true
+	end
+	
+	
+	InfoB.MouseButton1Up:Connect(i)
+	FarmB.MouseButton1Up:Connect(f)
+end
+coroutine.wrap(WKJDPPX_fake_script)()
+local function FIFGKW_fake_script() -- Bar.Drag 
+	local script = Instance.new('LocalScript', Bar)
 
 	local UserInputService = game:GetService("UserInputService")
 	
@@ -349,4 +345,4 @@ local function XTGS_fake_script() -- Bar.Drag
 		end
 	end)
 end
-coroutine.wrap(XTGS_fake_script)()
+coroutine.wrap(FIFGKW_fake_script)()
