@@ -246,7 +246,7 @@ BarShadow.Image = "http://www.roblox.com/asset/?id=12690998990"
 
 -- Scripts:
 
-local function MSCEGSM_fake_script() -- BeeSS.Main 
+local function PDVJDCB_fake_script() -- BeeSS.Main 
 	local script = Instance.new('LocalScript', BeeSS)
 
 	--toggle
@@ -261,8 +261,8 @@ local function MSCEGSM_fake_script() -- BeeSS.Main
 		end
 	end)
 end
-coroutine.wrap(MSCEGSM_fake_script)()
-local function FJQZF_fake_script() -- Unload.UnloadS 
+coroutine.wrap(PDVJDCB_fake_script)()
+local function CIFU_fake_script() -- Unload.UnloadS 
 	local script = Instance.new('LocalScript', Unload)
 
 	local button = script.Parent
@@ -271,13 +271,13 @@ local function FJQZF_fake_script() -- Unload.UnloadS
 		button.Parent.Parent.Parent.Parent.Parent:Destroy()
 	end)
 end
-coroutine.wrap(FJQZF_fake_script)()
-local function DFAVBC_fake_script() -- C_2.SF 
+coroutine.wrap(CIFU_fake_script)()
+local function LPBMB_fake_script() -- C_2.SF 
 	local script = Instance.new('LocalScript', C_2)
 
 	local button = script.Parent
 	local ind = button.Parent.Indicator
-	local toggle = true
+	local toggle = false
 	
 	button.MouseButton1Up:Connect(function()
 		if toggle then
@@ -330,8 +330,8 @@ local function DFAVBC_fake_script() -- C_2.SF
 		wait(1)
 	end
 end
-coroutine.wrap(DFAVBC_fake_script)()
-local function UTCKUXE_fake_script() -- MainBack.TabSwitch 
+coroutine.wrap(LPBMB_fake_script)()
+local function PQOZ_fake_script() -- MainBack.TabSwitch 
 	local script = Instance.new('LocalScript', MainBack)
 
 	--Info
@@ -359,8 +359,8 @@ local function UTCKUXE_fake_script() -- MainBack.TabSwitch
 	InfoB.MouseButton1Up:Connect(i)
 	FarmB.MouseButton1Up:Connect(f)
 end
-coroutine.wrap(UTCKUXE_fake_script)()
-local function EYFZLPF_fake_script() -- Bar.Drag 
+coroutine.wrap(PQOZ_fake_script)()
+local function NIJPUFP_fake_script() -- Bar.Drag 
 	local script = Instance.new('LocalScript', Bar)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -403,4 +403,4 @@ local function EYFZLPF_fake_script() -- Bar.Drag
 		end
 	end)
 end
-coroutine.wrap(EYFZLPF_fake_script)()
+coroutine.wrap(NIJPUFP_fake_script)()
