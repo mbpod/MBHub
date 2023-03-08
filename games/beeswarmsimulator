@@ -36,7 +36,7 @@ local BarShadow = Instance.new("ImageLabel")
 
 BeeSS.Name = "BeeSS"
 BeeSS.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-BeeSS.Enabled = false
+BeeSS.Enabled = true
 BeeSS.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 BeeSS.ResetOnSpawn = false
 
