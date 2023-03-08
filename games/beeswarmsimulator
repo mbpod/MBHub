@@ -246,7 +246,7 @@ BarShadow.Image = "http://www.roblox.com/asset/?id=12690998990"
 
 -- Scripts:
 
-local function AOTJM_fake_script() -- BeeSS.Main 
+local function WGYA_fake_script() -- BeeSS.Main 
 	local script = Instance.new('LocalScript', BeeSS)
 
 	--toggle
@@ -261,8 +261,8 @@ local function AOTJM_fake_script() -- BeeSS.Main
 		end
 	end)
 end
-coroutine.wrap(AOTJM_fake_script)()
-local function EAQJC_fake_script() -- Unload.UnloadS 
+coroutine.wrap(WGYA_fake_script)()
+local function SMSV_fake_script() -- Unload.UnloadS 
 	local script = Instance.new('LocalScript', Unload)
 
 	local button = script.Parent
@@ -271,12 +271,12 @@ local function EAQJC_fake_script() -- Unload.UnloadS
 		button.Parent.Parent.Parent.Parent.Parent:Destroy()
 	end)
 end
-coroutine.wrap(EAQJC_fake_script)()
-local function LSVTXEL_fake_script() -- FSnail.SF 
+coroutine.wrap(SMSV_fake_script)()
+local function HTWCIM_fake_script() -- FSnail.SF 
 	local script = Instance.new('LocalScript', FSnail)
 
 	local button = script.Parent
-	local ind = button.Parent.Indicator
+	local ind = button.Indicator
 	local toggle = false
 	
 	button.MouseButton1Up:Connect(function()
@@ -330,8 +330,8 @@ local function LSVTXEL_fake_script() -- FSnail.SF
 		wait(1)
 	end
 end
-coroutine.wrap(LSVTXEL_fake_script)()
-local function RNLAY_fake_script() -- MainBack.TabSwitch 
+coroutine.wrap(HTWCIM_fake_script)()
+local function VECIL_fake_script() -- MainBack.TabSwitch 
 	local script = Instance.new('LocalScript', MainBack)
 
 	--Info
@@ -359,8 +359,8 @@ local function RNLAY_fake_script() -- MainBack.TabSwitch
 	InfoB.MouseButton1Up:Connect(i)
 	FarmB.MouseButton1Up:Connect(f)
 end
-coroutine.wrap(RNLAY_fake_script)()
-local function RBBPECF_fake_script() -- Bar.Drag 
+coroutine.wrap(VECIL_fake_script)()
+local function MEED_fake_script() -- Bar.Drag 
 	local script = Instance.new('LocalScript', Bar)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -403,4 +403,4 @@ local function RBBPECF_fake_script() -- Bar.Drag
 		end
 	end)
 end
-coroutine.wrap(RBBPECF_fake_script)()
+coroutine.wrap(MEED_fake_script)()
