@@ -49,7 +49,7 @@ LT.TextTransparency = 1.000
 
 -- Scripts:
 
-local function HDZV_fake_script() -- MainLoad.Main 
+local function IOFJ_fake_script() -- MainLoad.Main 
 	local script = Instance.new('LocalScript', MainLoad)
 
 	--anim
@@ -69,7 +69,7 @@ local function HDZV_fake_script() -- MainLoad.Main
 	--games
 	lta.Completed:Connect(function()
 		wait(.3)
-		if game.GameId == 1537690962 then --bss
+		if game.PlaceId == 1537690962 then --bss
 			lt.Text = "Game found:"..game.Name
 			wait(1)
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/MBP0/MBHub/main/games/beeswarmsimulator"))()
@@ -82,4 +82,4 @@ local function HDZV_fake_script() -- MainLoad.Main
 		end
 	end)
 end
-coroutine.wrap(HDZV_fake_script)()
+coroutine.wrap(IOFJ_fake_script)()
