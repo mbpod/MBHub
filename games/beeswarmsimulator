@@ -36,7 +36,6 @@ local BarShadow = Instance.new("ImageLabel")
 
 BeeSS.Name = "BeeSS"
 BeeSS.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-BeeSS.Enabled = true
 BeeSS.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 BeeSS.ResetOnSpawn = false
 
@@ -110,7 +109,7 @@ Info.Size = UDim2.new(0, 141, 0, 33)
 Info.Font = Enum.Font.Unknown
 Info.Text = "Info"
 Info.TextColor3 = Color3.fromRGB(255, 255, 255)
-Info.TextSize = 18.000
+Info.TextSize = 15.000
 Info.TextWrapped = true
 
 UICorner_3.Parent = Info
@@ -123,7 +122,7 @@ Farm.Size = UDim2.new(0, 141, 0, 33)
 Farm.Font = Enum.Font.Unknown
 Farm.Text = "Farm"
 Farm.TextColor3 = Color3.fromRGB(255, 255, 255)
-Farm.TextSize = 18.000
+Farm.TextSize = 15.000
 Farm.TextWrapped = true
 
 UICorner_4.Parent = Farm
@@ -139,7 +138,6 @@ MainScroll.BackgroundTransparency = 1.000
 MainScroll.BorderSizePixel = 0
 MainScroll.Position = UDim2.new(0.00999999978, 0, 0.259780824, 0)
 MainScroll.Size = UDim2.new(0, 595, 0, 208)
-MainScroll.Visible = false
 MainScroll.CanvasSize = UDim2.new(0, 0, 3, 0)
 MainScroll.ScrollBarThickness = 5
 
@@ -180,6 +178,7 @@ MainScroll_2.BackgroundTransparency = 1.000
 MainScroll_2.BorderSizePixel = 0
 MainScroll_2.Position = UDim2.new(0.00999999978, 0, 0.259780824, 0)
 MainScroll_2.Size = UDim2.new(0, 595, 0, 208)
+MainScroll_2.Visible = false
 MainScroll_2.CanvasSize = UDim2.new(0, 0, 3, 0)
 MainScroll_2.ScrollBarThickness = 5
 
@@ -247,7 +246,7 @@ BarShadow.Image = "http://www.roblox.com/asset/?id=12690998990"
 
 -- Scripts:
 
-local function ZATJ_fake_script() -- BeeSS.Main 
+local function MSCEGSM_fake_script() -- BeeSS.Main 
 	local script = Instance.new('LocalScript', BeeSS)
 
 	--toggle
@@ -262,8 +261,8 @@ local function ZATJ_fake_script() -- BeeSS.Main
 		end
 	end)
 end
-coroutine.wrap(ZATJ_fake_script)()
-local function TZMUWH_fake_script() -- Unload.UnloadS 
+coroutine.wrap(MSCEGSM_fake_script)()
+local function FJQZF_fake_script() -- Unload.UnloadS 
 	local script = Instance.new('LocalScript', Unload)
 
 	local button = script.Parent
@@ -272,8 +271,67 @@ local function TZMUWH_fake_script() -- Unload.UnloadS
 		button.Parent.Parent.Parent.Parent.Parent:Destroy()
 	end)
 end
-coroutine.wrap(TZMUWH_fake_script)()
-local function WKJDPPX_fake_script() -- MainBack.TabSwitch 
+coroutine.wrap(FJQZF_fake_script)()
+local function DFAVBC_fake_script() -- C_2.SF 
+	local script = Instance.new('LocalScript', C_2)
+
+	local button = script.Parent
+	local ind = button.Parent.Indicator
+	local toggle = true
+	
+	button.MouseButton1Up:Connect(function()
+		if toggle then
+			toggle = false
+			ind.BackgroundColor3 = Color3.new(1, 0, 0)
+		else
+			toggle = true
+			ind.BackgroundColor3 = Color3.new(0, 1, 0)
+		end
+	end)
+	
+	--tokens
+	local i = "rbxassetid://2319083910" --impale
+	local r = "rbxassetid://1442700745" --rage
+	
+	local f = game.Workspace:FindFirstChild("Collectibles")
+	local h = game.Players.LocalPlayer.Character.Humanoid
+	
+	local function fp()
+		if f then
+			for _, p in ipairs(f:GetChildren()) do
+				if p:IsA("BasePart") and p:FindFirstChild("FrontDecal") then
+					local d = p.FrontDecal
+					if d and d:IsA("Decal") and d.Texture == i or r then
+						return p
+					end
+				end
+			end
+		end
+		return nil
+	end
+	
+	local function mhp(p)
+		if p then
+			h:MoveTo(p.Position)
+			h.MoveToFinished:Connect(function()
+				h:MoveTo(Vector3.new(424, 97, -175))
+			end)
+		end
+	end
+	
+	while toggle do
+		if not toggle then
+			break
+		end
+		local mp = fp()
+		if mp then
+			mhp(mp)
+		end
+		wait(1)
+	end
+end
+coroutine.wrap(DFAVBC_fake_script)()
+local function UTCKUXE_fake_script() -- MainBack.TabSwitch 
 	local script = Instance.new('LocalScript', MainBack)
 
 	--Info
@@ -301,8 +359,8 @@ local function WKJDPPX_fake_script() -- MainBack.TabSwitch
 	InfoB.MouseButton1Up:Connect(i)
 	FarmB.MouseButton1Up:Connect(f)
 end
-coroutine.wrap(WKJDPPX_fake_script)()
-local function FIFGKW_fake_script() -- Bar.Drag 
+coroutine.wrap(UTCKUXE_fake_script)()
+local function EYFZLPF_fake_script() -- Bar.Drag 
 	local script = Instance.new('LocalScript', Bar)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -345,4 +403,4 @@ local function FIFGKW_fake_script() -- Bar.Drag
 		end
 	end)
 end
-coroutine.wrap(FIFGKW_fake_script)()
+coroutine.wrap(EYFZLPF_fake_script)()
