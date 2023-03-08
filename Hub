@@ -49,7 +49,7 @@ LT.TextTransparency = 1.000
 
 -- Scripts:
 
-local function QJKN_fake_script() -- MainLoad.Main 
+local function HDZV_fake_script() -- MainLoad.Main 
 	local script = Instance.new('LocalScript', MainLoad)
 
 	--anim
@@ -67,10 +67,9 @@ local function QJKN_fake_script() -- MainLoad.Main
 	logoa:Play()
 	lta:Play()
 	--games
-	local bss = 1537690962
 	lta.Completed:Connect(function()
 		wait(.3)
-		if game.GameId == bss then --bee swarm simulator
+		if game.GameId == 1537690962 then --bss
 			lt.Text = "Game found:"..game.Name
 			wait(1)
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/MBP0/MBHub/main/games/beeswarmsimulator"))()
@@ -78,8 +77,9 @@ local function QJKN_fake_script() -- MainLoad.Main
 		else
 			lt.Text = "Game not supported!"
 			lt.TextColor3 = Color3.new(1, 0.203922, 0.215686)
+			wait(3)
 			script.Parent.Parent:Destroy()
 		end
 	end)
 end
-coroutine.wrap(QJKN_fake_script)()
+coroutine.wrap(HDZV_fake_script)()
