@@ -49,7 +49,7 @@ LT.TextTransparency = 1.000
 
 -- Scripts:
 
-local function IOFJ_fake_script() -- MainLoad.Main 
+local function DGVFP_fake_script() -- MainLoad.Main 
 	local script = Instance.new('LocalScript', MainLoad)
 
 	--anim
@@ -70,7 +70,7 @@ local function IOFJ_fake_script() -- MainLoad.Main
 	lta.Completed:Connect(function()
 		wait(.3)
 		if game.PlaceId == 1537690962 then --bss
-			lt.Text = "Game found:"..game.Name
+			lt.Text = "Game found: Bee Swarm Simulator"
 			wait(1)
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/MBP0/MBHub/main/games/beeswarmsimulator"))()
 			script.Parent.Parent:Destroy()
@@ -82,4 +82,4 @@ local function IOFJ_fake_script() -- MainLoad.Main
 		end
 	end)
 end
-coroutine.wrap(IOFJ_fake_script)()
+coroutine.wrap(DGVFP_fake_script)()
