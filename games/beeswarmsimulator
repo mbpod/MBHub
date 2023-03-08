@@ -246,7 +246,7 @@ BarShadow.Image = "http://www.roblox.com/asset/?id=12690998990"
 
 -- Scripts:
 
-local function WGYA_fake_script() -- BeeSS.Main 
+local function CIRRHJ_fake_script() -- BeeSS.Main 
 	local script = Instance.new('LocalScript', BeeSS)
 
 	--toggle
@@ -261,8 +261,8 @@ local function WGYA_fake_script() -- BeeSS.Main
 		end
 	end)
 end
-coroutine.wrap(WGYA_fake_script)()
-local function SMSV_fake_script() -- Unload.UnloadS 
+coroutine.wrap(CIRRHJ_fake_script)()
+local function ZVFT_fake_script() -- Unload.UnloadS 
 	local script = Instance.new('LocalScript', Unload)
 
 	local button = script.Parent
@@ -271,8 +271,8 @@ local function SMSV_fake_script() -- Unload.UnloadS
 		button.Parent.Parent.Parent.Parent.Parent:Destroy()
 	end)
 end
-coroutine.wrap(SMSV_fake_script)()
-local function HTWCIM_fake_script() -- FSnail.SF 
+coroutine.wrap(ZVFT_fake_script)()
+local function XMYWQ_fake_script() -- FSnail.SF 
 	local script = Instance.new('LocalScript', FSnail)
 
 	local button = script.Parent
@@ -330,8 +330,8 @@ local function HTWCIM_fake_script() -- FSnail.SF
 		wait(1)
 	end
 end
-coroutine.wrap(HTWCIM_fake_script)()
-local function VECIL_fake_script() -- MainBack.TabSwitch 
+coroutine.wrap(XMYWQ_fake_script)()
+local function SMPD_fake_script() -- MainBack.TabSwitch 
 	local script = Instance.new('LocalScript', MainBack)
 
 	--Info
@@ -359,8 +359,8 @@ local function VECIL_fake_script() -- MainBack.TabSwitch
 	InfoB.MouseButton1Up:Connect(i)
 	FarmB.MouseButton1Up:Connect(f)
 end
-coroutine.wrap(VECIL_fake_script)()
-local function MEED_fake_script() -- Bar.Drag 
+coroutine.wrap(SMPD_fake_script)()
+local function VRWISA_fake_script() -- Bar.Drag 
 	local script = Instance.new('LocalScript', Bar)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -403,4 +403,4 @@ local function MEED_fake_script() -- Bar.Drag
 		end
 	end)
 end
-coroutine.wrap(MEED_fake_script)()
+coroutine.wrap(VRWISA_fake_script)()
