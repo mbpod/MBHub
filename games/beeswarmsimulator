@@ -259,8 +259,8 @@ Converted["_Off"].Parent = Converted["_MBss"]
 
 Converted["_Mo"].BackgroundColor3 = Color3.fromRGB(62.00000390410423, 62.00000390410423, 62.00000390410423)
 Converted["_Mo"].ClipsDescendants = true
-Converted["_Mo"].Position = UDim2.new(0.00703096902, 0, 0.862944186, 0)
-Converted["_Mo"].Size = UDim2.new(0, 136, 0, 101)
+Converted["_Mo"].Position = UDim2.new(0.00703096902, 0, 0.903553307, 0)
+Converted["_Mo"].Size = UDim2.new(0, 136, 0, 69)
 Converted["_Mo"].Name = "Mo"
 Converted["_Mo"].Parent = Converted["_Off"]
 
@@ -281,16 +281,16 @@ Converted["_time"].TextSize = 14
 Converted["_time"].TextTransparency = 0.4000000059604645
 Converted["_time"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_time"].BackgroundTransparency = 1
-Converted["_time"].Position = UDim2.new(0.0507125296, 0, 0.298971951, 0)
+Converted["_time"].Position = UDim2.new(0.263947815, 0, 0.437271059, 0)
 Converted["_time"].Size = UDim2.new(0, 63, 0, 22)
 Converted["_time"].Name = "time"
 Converted["_time"].Parent = Converted["_Mo"]
 
-Converted["_MIcon"].Image = "http://www.roblox.com/asset/?id=12690356012"
+Converted["_MIcon"].Image = "http://www.roblox.com/asset/?id=12690353884"
 Converted["_MIcon"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_MIcon"].BackgroundTransparency = 1
-Converted["_MIcon"].Position = UDim2.new(0.362941176, 0, 0.0787129924, 0)
-Converted["_MIcon"].Size = UDim2.new(0, 37, 0, 23)
+Converted["_MIcon"].Position = UDim2.new(0.245294064, 0, -0.0869565234, 0)
+Converted["_MIcon"].Size = UDim2.new(0, 66, 0, 46)
 Converted["_MIcon"].Name = "MIcon"
 Converted["_MIcon"].Parent = Converted["_Mo"]
 
@@ -307,7 +307,7 @@ local fake_module_scripts = {}
 
 -- Fake Local Scripts:
 
-local function LAVGRB_fake_script() -- Fake Script: StarterGui.MBss.Main
+local function MSDQ_fake_script() -- Fake Script: StarterGui.MBss.Main
     local script = Instance.new("LocalScript")
     script.Name = "Main"
     script.Parent = Converted["_MBss"]
@@ -446,4 +446,4 @@ local function LAVGRB_fake_script() -- Fake Script: StarterGui.MBss.Main
 	g.Text = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
 end
 
-coroutine.wrap(LAVGRB_fake_script)()
+coroutine.wrap(MSDQ_fake_script)()
