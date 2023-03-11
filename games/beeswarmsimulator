@@ -1,246 +1,266 @@
--- Gui to Lua
--- Version: 3.2
+-- Generated using RoadToGlory's Converter v1.1 (RoadToGlory#9879)
 
 -- Instances:
 
-local MBss = Instance.new("ScreenGui")
-local MainBar = Instance.new("Frame")
-local UICorner = Instance.new("UICorner")
-local Flatten = Instance.new("Frame")
-local Back = Instance.new("Frame")
-local UICorner_2 = Instance.new("UICorner")
-local BarShadow = Instance.new("ImageLabel")
-local Selection = Instance.new("Frame")
-local UICorner_3 = Instance.new("UICorner")
-local Flatten_2 = Instance.new("Frame")
-local Home = Instance.new("TextButton")
-local Icons = Instance.new("Folder")
-local HI = Instance.new("ImageLabel")
-local FI = Instance.new("ImageLabel")
-local Farm = Instance.new("TextButton")
-local Tabs = Instance.new("Folder")
-local Home_2 = Instance.new("ScrollingFrame")
-local wuback = Instance.new("Frame")
-local wu = Instance.new("TextLabel")
-local UICorner_4 = Instance.new("UICorner")
-local wuicon = Instance.new("ImageLabel")
-local UICorner_5 = Instance.new("UICorner")
-local Close = Instance.new("ImageButton")
-local info = Instance.new("Frame")
-local UICorner_6 = Instance.new("UICorner")
-local time = Instance.new("TextLabel")
-local game = Instance.new("TextLabel")
+local Converted = {
+	["_MBss"] = Instance.new("ScreenGui");
+	["_MainBar"] = Instance.new("Frame");
+	["_UICorner"] = Instance.new("UICorner");
+	["_Flatten"] = Instance.new("Frame");
+	["_Back"] = Instance.new("Frame");
+	["_UICorner1"] = Instance.new("UICorner");
+	["_BarShadow"] = Instance.new("ImageLabel");
+	["_Selection"] = Instance.new("Frame");
+	["_UICorner2"] = Instance.new("UICorner");
+	["_Flatten1"] = Instance.new("Frame");
+	["_Home"] = Instance.new("TextButton");
+	["_Icons"] = Instance.new("Folder");
+	["_HI"] = Instance.new("ImageLabel");
+	["_FI"] = Instance.new("ImageLabel");
+	["_Farm"] = Instance.new("TextButton");
+	["_Tabs"] = Instance.new("Folder");
+	["_Home1"] = Instance.new("ScrollingFrame");
+	["_wuback"] = Instance.new("Frame");
+	["_wu"] = Instance.new("TextLabel");
+	["_UICorner3"] = Instance.new("UICorner");
+	["_wuicon"] = Instance.new("ImageLabel");
+	["_UICorner4"] = Instance.new("UICorner");
+	["_Close"] = Instance.new("ImageButton");
+	["_info"] = Instance.new("Frame");
+	["_UICorner5"] = Instance.new("UICorner");
+	["_time"] = Instance.new("TextLabel");
+	["_game"] = Instance.new("TextLabel");
+	["_Main"] = Instance.new("LocalScript");
+}
 
---Properties:
+-- Properties:
 
-MBss.Name = "MBss"
-MBss.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-MBss.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Converted["_MBss"].ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Converted["_MBss"].Name = "MBss"
+Converted["_MBss"].Parent = game:GetService("CoreGui")
 
-MainBar.Name = "MainBar"
-MainBar.Parent = MBss
-MainBar.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
-MainBar.Position = UDim2.new(0.245810062, 0, 0.285533011, 0)
-MainBar.Size = UDim2.new(0, 637, 0, 37)
-MainBar.ZIndex = 2
+Converted["_MainBar"].BackgroundColor3 = Color3.fromRGB(45.00000111758709, 45.00000111758709, 45.00000111758709)
+Converted["_MainBar"].Position = UDim2.new(0.245810062, 0, 0.285533011, 0)
+Converted["_MainBar"].Size = UDim2.new(0, 637, 0, 37)
+Converted["_MainBar"].ZIndex = 2
+Converted["_MainBar"].Name = "MainBar"
+Converted["_MainBar"].Parent = Converted["_MBss"]
 
-UICorner.CornerRadius = UDim.new(0, 10)
-UICorner.Parent = MainBar
+Converted["_UICorner"].CornerRadius = UDim.new(0, 10)
+Converted["_UICorner"].Parent = Converted["_MainBar"]
 
-Flatten.Name = "Flatten"
-Flatten.Parent = MainBar
-Flatten.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
-Flatten.BorderSizePixel = 0
-Flatten.Position = UDim2.new(0, 0, 0.56756717, 0)
-Flatten.Size = UDim2.new(0, 637, 0, 16)
-Flatten.ZIndex = 2
+Converted["_Flatten"].BackgroundColor3 = Color3.fromRGB(45.00000111758709, 45.00000111758709, 45.00000111758709)
+Converted["_Flatten"].BorderSizePixel = 0
+Converted["_Flatten"].Position = UDim2.new(0, 0, 0.56756717, 0)
+Converted["_Flatten"].Size = UDim2.new(0, 637, 0, 16)
+Converted["_Flatten"].ZIndex = 2
+Converted["_Flatten"].Name = "Flatten"
+Converted["_Flatten"].Parent = Converted["_MainBar"]
 
-Back.Name = "Back"
-Back.Parent = MainBar
-Back.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
-Back.BorderColor3 = Color3.fromRGB(27, 42, 53)
-Back.BorderSizePixel = 0
-Back.Position = UDim2.new(0, 0, 0.56756717, 0)
-Back.Size = UDim2.new(0, 637, 0, 349)
+Converted["_Back"].BackgroundColor3 = Color3.fromRGB(70.00000342726707, 70.00000342726707, 70.00000342726707)
+Converted["_Back"].BorderColor3 = Color3.fromRGB(27.000000290572643, 42.000001296401024, 53.00000064074993)
+Converted["_Back"].BorderSizePixel = 0
+Converted["_Back"].Position = UDim2.new(0, 0, 0.56756717, 0)
+Converted["_Back"].Size = UDim2.new(0, 637, 0, 349)
+Converted["_Back"].Name = "Back"
+Converted["_Back"].Parent = Converted["_MainBar"]
 
-UICorner_2.CornerRadius = UDim.new(0, 10)
-UICorner_2.Parent = Back
+Converted["_UICorner1"].CornerRadius = UDim.new(0, 10)
+Converted["_UICorner1"].Parent = Converted["_Back"]
 
-BarShadow.Name = "BarShadow"
-BarShadow.Parent = Back
-BarShadow.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-BarShadow.BackgroundTransparency = 1.000
-BarShadow.BorderSizePixel = 0
-BarShadow.Position = UDim2.new(-0.00627943501, 0, 0.0229226369, 0)
-BarShadow.Size = UDim2.new(0, 645, 0, 36)
-BarShadow.ZIndex = 2
-BarShadow.Image = "http://www.roblox.com/asset/?id=12690998990"
+Converted["_BarShadow"].Image = "http://www.roblox.com/asset/?id=12690998990"
+Converted["_BarShadow"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_BarShadow"].BackgroundTransparency = 1
+Converted["_BarShadow"].BorderSizePixel = 0
+Converted["_BarShadow"].Position = UDim2.new(-0.00627943501, 0, 0.0229226369, 0)
+Converted["_BarShadow"].Size = UDim2.new(0, 645, 0, 36)
+Converted["_BarShadow"].ZIndex = 2
+Converted["_BarShadow"].Name = "BarShadow"
+Converted["_BarShadow"].Parent = Converted["_Back"]
 
-Selection.Name = "Selection"
-Selection.Parent = Back
-Selection.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-Selection.ClipsDescendants = true
-Selection.Position = UDim2.new(0, 0, 0.0229226369, 0)
-Selection.Size = UDim2.new(0, 37, 0, 341)
-Selection.ZIndex = 2
+Converted["_Selection"].BackgroundColor3 = Color3.fromRGB(40.00000141561031, 40.00000141561031, 40.00000141561031)
+Converted["_Selection"].ClipsDescendants = true
+Converted["_Selection"].Position = UDim2.new(0, 0, 0.0229226369, 0)
+Converted["_Selection"].Size = UDim2.new(0, 37, 0, 341)
+Converted["_Selection"].ZIndex = 2
+Converted["_Selection"].Name = "Selection"
+Converted["_Selection"].Parent = Converted["_Back"]
 
-UICorner_3.Parent = Selection
+Converted["_UICorner2"].Parent = Converted["_Selection"]
 
-Flatten_2.Name = "Flatten"
-Flatten_2.Parent = Selection
-Flatten_2.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-Flatten_2.BorderSizePixel = 0
-Flatten_2.Position = UDim2.new(0.869230747, 0, -0.000563612906, 0)
-Flatten_2.Size = UDim2.new(0, 17, 0, 333)
+Converted["_Flatten1"].BackgroundColor3 = Color3.fromRGB(40.00000141561031, 40.00000141561031, 40.00000141561031)
+Converted["_Flatten1"].BorderSizePixel = 0
+Converted["_Flatten1"].Position = UDim2.new(0.869230747, 0, -0.000563612906, 0)
+Converted["_Flatten1"].Size = UDim2.new(0, 17, 0, 333)
+Converted["_Flatten1"].Name = "Flatten"
+Converted["_Flatten1"].Parent = Converted["_Selection"]
 
-Home.Name = "Home"
-Home.Parent = Selection
-Home.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Home.BackgroundTransparency = 1.000
-Home.ClipsDescendants = true
-Home.Position = UDim2.new(0.115384616, 0, 0.0540540554, 0)
-Home.Size = UDim2.new(0, 115, 0, 39)
-Home.Font = Enum.Font.SourceSansBold
-Home.Text = "Home"
-Home.TextColor3 = Color3.fromRGB(244, 244, 244)
-Home.TextSize = 17.000
-Home.TextWrapped = true
+Converted["_Home"].Font = Enum.Font.SourceSansBold
+Converted["_Home"].Text = "Home"
+Converted["_Home"].TextColor3 = Color3.fromRGB(244.0000158548355, 244.0000158548355, 244.0000158548355)
+Converted["_Home"].TextSize = 17
+Converted["_Home"].TextTruncate = Enum.TextTruncate.AtEnd
+Converted["_Home"].TextWrapped = true
+Converted["_Home"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Home"].BackgroundTransparency = 1
+Converted["_Home"].ClipsDescendants = true
+Converted["_Home"].Position = UDim2.new(0.115384616, 0, 0.0540540554, 0)
+Converted["_Home"].Size = UDim2.new(0, 115, 0, 39)
+Converted["_Home"].Name = "Home"
+Converted["_Home"].Parent = Converted["_Selection"]
 
-Icons.Name = "Icons"
-Icons.Parent = Selection
+Converted["_Icons"].Name = "Icons"
+Converted["_Icons"].Parent = Converted["_Selection"]
 
-HI.Name = "HI"
-HI.Parent = Icons
-HI.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-HI.BackgroundTransparency = 1.000
-HI.Position = UDim2.new(0.100000001, 0, 0.0680000037, 0)
-HI.Size = UDim2.new(0, 28, 0, 28)
-HI.Image = "rbxassetid://3926305904"
-HI.ImageRectOffset = Vector2.new(964, 204)
-HI.ImageRectSize = Vector2.new(36, 36)
+Converted["_HI"].Image = "rbxassetid://3926305904"
+Converted["_HI"].ImageRectOffset = Vector2.new(964, 204)
+Converted["_HI"].ImageRectSize = Vector2.new(36, 36)
+Converted["_HI"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_HI"].BackgroundTransparency = 1
+Converted["_HI"].Position = UDim2.new(0.100000001, 0, 0.0680000037, 0)
+Converted["_HI"].Size = UDim2.new(0, 28, 0, 28)
+Converted["_HI"].Name = "HI"
+Converted["_HI"].Parent = Converted["_Icons"]
 
-FI.Name = "FI"
-FI.Parent = Icons
-FI.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-FI.BackgroundTransparency = 1.000
-FI.Position = UDim2.new(0.100000001, 0, 0.185000002, 0)
-FI.Size = UDim2.new(0, 28, 0, 28)
-FI.Image = "rbxassetid://3926305904"
-FI.ImageRectOffset = Vector2.new(204, 964)
-FI.ImageRectSize = Vector2.new(36, 36)
+Converted["_FI"].Image = "rbxassetid://3926305904"
+Converted["_FI"].ImageRectOffset = Vector2.new(204, 964)
+Converted["_FI"].ImageRectSize = Vector2.new(36, 36)
+Converted["_FI"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_FI"].BackgroundTransparency = 1
+Converted["_FI"].Position = UDim2.new(0.100000001, 0, 0.185000002, 0)
+Converted["_FI"].Size = UDim2.new(0, 28, 0, 28)
+Converted["_FI"].Name = "FI"
+Converted["_FI"].Parent = Converted["_Icons"]
 
-Farm.Name = "Farm"
-Farm.Parent = Selection
-Farm.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Farm.BackgroundTransparency = 1.000
-Farm.ClipsDescendants = true
-Farm.Position = UDim2.new(0.115384616, 0, 0.171171173, 0)
-Farm.Size = UDim2.new(0, 115, 0, 39)
-Farm.Font = Enum.Font.SourceSansBold
-Farm.Text = "Farm"
-Farm.TextColor3 = Color3.fromRGB(244, 244, 244)
-Farm.TextSize = 17.000
-Farm.TextWrapped = true
+Converted["_Farm"].Font = Enum.Font.SourceSansBold
+Converted["_Farm"].Text = "Farm"
+Converted["_Farm"].TextColor3 = Color3.fromRGB(244.0000158548355, 244.0000158548355, 244.0000158548355)
+Converted["_Farm"].TextSize = 17
+Converted["_Farm"].TextTruncate = Enum.TextTruncate.AtEnd
+Converted["_Farm"].TextWrapped = true
+Converted["_Farm"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Farm"].BackgroundTransparency = 1
+Converted["_Farm"].ClipsDescendants = true
+Converted["_Farm"].Position = UDim2.new(0.115384616, 0, 0.171171173, 0)
+Converted["_Farm"].Size = UDim2.new(0, 115, 0, 39)
+Converted["_Farm"].Name = "Farm"
+Converted["_Farm"].Parent = Converted["_Selection"]
 
-Tabs.Name = "Tabs"
-Tabs.Parent = Back
+Converted["_Tabs"].Name = "Tabs"
+Converted["_Tabs"].Parent = Converted["_Back"]
 
-Home_2.Name = "Home"
-Home_2.Parent = Tabs
-Home_2.Active = true
-Home_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Home_2.BackgroundTransparency = 1.000
-Home_2.Position = UDim2.new(0.058084771, 0, 0.0458452739, 0)
-Home_2.Size = UDim2.new(0, 600, 0, 332)
+Converted["_Home1"].ScrollBarImageColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Home1"].ScrollBarImageTransparency = 1
+Converted["_Home1"].Active = true
+Converted["_Home1"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Home1"].BackgroundTransparency = 1
+Converted["_Home1"].Position = UDim2.new(0.058084771, 0, 0.0458452739, 0)
+Converted["_Home1"].Size = UDim2.new(0, 600, 0, 332)
+Converted["_Home1"].Name = "Home"
+Converted["_Home1"].Parent = Converted["_Tabs"]
 
-wuback.Name = "wuback"
-wuback.Parent = Home_2
-wuback.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
-wuback.Position = UDim2.new(0.0199999996, 0, 0.0245953277, 0)
-wuback.Size = UDim2.new(0, 571, 0, 82)
+Converted["_wuback"].BackgroundColor3 = Color3.fromRGB(56.000000461936, 56.000000461936, 56.000000461936)
+Converted["_wuback"].Position = UDim2.new(0.0199999996, 0, 0.0245953277, 0)
+Converted["_wuback"].Size = UDim2.new(0, 571, 0, 82)
+Converted["_wuback"].Name = "wuback"
+Converted["_wuback"].Parent = Converted["_Home1"]
 
-wu.Name = "wu"
-wu.Parent = wuback
-wu.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-wu.BackgroundTransparency = 1.000
-wu.Position = UDim2.new(0.173560992, 0, 0.345005125, 0)
-wu.Size = UDim2.new(0, 399, 0, 25)
-wu.Font = Enum.Font.Unknown
-wu.Text = "Welcome, John"
-wu.TextColor3 = Color3.fromRGB(255, 255, 255)
-wu.TextSize = 18.000
-wu.TextXAlignment = Enum.TextXAlignment.Left
+Converted["_wu"].Font = Enum.Font.GothamBold
+Converted["_wu"].Text = "Welcome, John"
+Converted["_wu"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_wu"].TextSize = 18
+Converted["_wu"].TextXAlignment = Enum.TextXAlignment.Left
+Converted["_wu"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_wu"].BackgroundTransparency = 1
+Converted["_wu"].Position = UDim2.new(0.173560992, 0, 0.345005125, 0)
+Converted["_wu"].Size = UDim2.new(0, 399, 0, 25)
+Converted["_wu"].Name = "wu"
+Converted["_wu"].Parent = Converted["_wuback"]
 
-UICorner_4.Parent = wuback
+Converted["_UICorner3"].Parent = Converted["_wuback"]
 
-wuicon.Name = "wuicon"
-wuicon.Parent = wuback
-wuicon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-wuicon.BackgroundTransparency = 1.000
-wuicon.Position = UDim2.new(0.0140105104, 0, 0.0609756112, 0)
-wuicon.Size = UDim2.new(0, 72, 0, 72)
-wuicon.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+Converted["_wuicon"].Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+Converted["_wuicon"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_wuicon"].BackgroundTransparency = 1
+Converted["_wuicon"].Position = UDim2.new(0.0140105104, 0, 0.0609756112, 0)
+Converted["_wuicon"].Size = UDim2.new(0, 72, 0, 72)
+Converted["_wuicon"].Name = "wuicon"
+Converted["_wuicon"].Parent = Converted["_wuback"]
 
-UICorner_5.CornerRadius = UDim.new(1, 0)
-UICorner_5.Parent = wuicon
+Converted["_UICorner4"].CornerRadius = UDim.new(1, 0)
+Converted["_UICorner4"].Parent = Converted["_wuicon"]
 
-Close.Name = "Close"
-Close.Parent = wuback
-Close.AnchorPoint = Vector2.new(1, 0)
-Close.BackgroundTransparency = 1.000
-Close.LayoutOrder = 5
-Close.Position = UDim2.new(0.952347517, 0, 0.341463417, 0)
-Close.Size = UDim2.new(0, 25, 0, 25)
-Close.ZIndex = 2
-Close.Image = "rbxassetid://3926305904"
-Close.ImageRectOffset = Vector2.new(4, 4)
-Close.ImageRectSize = Vector2.new(24, 24)
+Converted["_Close"].Image = "rbxassetid://3926305904"
+Converted["_Close"].ImageRectOffset = Vector2.new(4, 4)
+Converted["_Close"].ImageRectSize = Vector2.new(24, 24)
+Converted["_Close"].AnchorPoint = Vector2.new(1, 0)
+Converted["_Close"].BackgroundTransparency = 1
+Converted["_Close"].LayoutOrder = 5
+Converted["_Close"].Position = UDim2.new(0.952347517, 0, 0.341463417, 0)
+Converted["_Close"].Size = UDim2.new(0, 25, 0, 25)
+Converted["_Close"].ZIndex = 2
+Converted["_Close"].Name = "Close"
+Converted["_Close"].Parent = Converted["_wuback"]
 
-info.Name = "info"
-info.Parent = Home_2
-info.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
-info.Position = UDim2.new(0.0199999977, 0, 0.157581225, 0)
-info.Size = UDim2.new(0, 215, 0, 105)
+Converted["_info"].BackgroundColor3 = Color3.fromRGB(56.000000461936, 56.000000461936, 56.000000461936)
+Converted["_info"].Position = UDim2.new(0.0199999977, 0, 0.157581225, 0)
+Converted["_info"].Size = UDim2.new(0, 215, 0, 105)
+Converted["_info"].Name = "info"
+Converted["_info"].Parent = Converted["_Home1"]
 
-UICorner_6.Parent = info
+Converted["_UICorner5"].Parent = Converted["_info"]
 
-time.Name = "time"
-time.Parent = info
-time.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-time.BackgroundTransparency = 1.000
-time.Position = UDim2.new(0.367441863, 0, 0, 0)
-time.Size = UDim2.new(0, 56, 0, 32)
-time.Font = Enum.Font.Unknown
-time.Text = "00:00"
-time.TextColor3 = Color3.fromRGB(255, 255, 255)
-time.TextSize = 17.000
+Converted["_time"].Font = Enum.Font.GothamBold
+Converted["_time"].Text = "00:00"
+Converted["_time"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_time"].TextSize = 17
+Converted["_time"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_time"].BackgroundTransparency = 1
+Converted["_time"].Position = UDim2.new(0.367441863, 0, 0, 0)
+Converted["_time"].Size = UDim2.new(0, 56, 0, 32)
+Converted["_time"].Name = "time"
+Converted["_time"].Parent = Converted["_info"]
 
-game.Name = "game"
-game.Parent = info
-game.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-game.BackgroundTransparency = 1.000
-game.Position = UDim2.new(0.000751300191, 0, 0.304761916, 0)
-game.Size = UDim2.new(0, 214, 0, 32)
-game.Font = Enum.Font.Unknown
-game.Text = "game"
-game.TextColor3 = Color3.fromRGB(255, 255, 255)
-game.TextSize = 17.000
-game.TextWrapped = true
+Converted["_game"].Font = Enum.Font.GothamBold
+Converted["_game"].Text = "game"
+Converted["_game"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_game"].TextSize = 17
+Converted["_game"].TextWrapped = true
+Converted["_game"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_game"].BackgroundTransparency = 1
+Converted["_game"].Position = UDim2.new(0.000751300191, 0, 0.304761916, 0)
+Converted["_game"].Size = UDim2.new(0, 214, 0, 32)
+Converted["_game"].Name = "game"
+Converted["_game"].Parent = Converted["_info"]
 
--- Scripts:
+-- Fake Module Scripts:
 
-local function VQZZ_fake_script() -- MBss.Main 
-	local script = Instance.new('LocalScript', MBss)
+local fake_module_scripts = {}
+
+
+-- Fake Local Scripts:
+
+local function GYUXN_fake_script() -- Fake Script: StarterGui.MBss.Main
+    local script = Instance.new("LocalScript")
+    script.Name = "Main"
+    script.Parent = Converted["_MBss"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
 	--Setup
 	
 	local uis = game:GetService("UserInputService")
 	local tweenservice = game:GetService("TweenService")
-	
+	local players = game:GetService("Players")
 	
 	--Player
 	
-	local players = game:GetService("Players")
 	local player = players.LocalPlayer
 	local char = player.Character
 	local mouse = player:GetMouse()
@@ -331,4 +351,5 @@ local function VQZZ_fake_script() -- MBss.Main
 	
 	g.Text = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
 end
-coroutine.wrap(VQZZ_fake_script)()
+
+coroutine.wrap(GYUXN_fake_script)()
