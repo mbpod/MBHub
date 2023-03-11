@@ -3,369 +3,278 @@
 
 -- Instances:
 
-local BeeSS = Instance.new("ScreenGui")
-local Bar = Instance.new("Frame")
+local MBss = Instance.new("ScreenGui")
+local MainBar = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
 local Flatten = Instance.new("Frame")
-local Game = Instance.new("TextLabel")
-local Logo = Instance.new("ImageLabel")
-local MainBack = Instance.new("Frame")
+local Back = Instance.new("Frame")
 local UICorner_2 = Instance.new("UICorner")
-local Tabs = Instance.new("ScrollingFrame")
-local Info = Instance.new("TextButton")
-local UICorner_3 = Instance.new("UICorner")
-local Farm = Instance.new("TextButton")
-local UICorner_4 = Instance.new("UICorner")
-local InfoTab = Instance.new("Folder")
-local MainScroll = Instance.new("ScrollingFrame")
-local Unload = Instance.new("TextButton")
-local UICorner_5 = Instance.new("UICorner")
-local C = Instance.new("ImageButton")
-local FarmTab = Instance.new("Folder")
-local MainScroll_2 = Instance.new("ScrollingFrame")
-local q = Instance.new("Frame")
-local qq = Instance.new("TextLabel")
-local FSnail = Instance.new("TextButton")
-local UICorner_6 = Instance.new("UICorner")
-local C_2 = Instance.new("ImageButton")
-local Indicator = Instance.new("Frame")
-local UICorner_7 = Instance.new("UICorner")
 local BarShadow = Instance.new("ImageLabel")
+local Selection = Instance.new("Frame")
+local UICorner_3 = Instance.new("UICorner")
+local Flatten_2 = Instance.new("Frame")
+local Home = Instance.new("TextButton")
+local Icons = Instance.new("Folder")
+local HI = Instance.new("ImageLabel")
+local FI = Instance.new("ImageLabel")
+local Farm = Instance.new("TextButton")
+local Tabs = Instance.new("Folder")
+local Home_2 = Instance.new("ScrollingFrame")
+local wuback = Instance.new("Frame")
+local wu = Instance.new("TextLabel")
+local UICorner_4 = Instance.new("UICorner")
+local wuicon = Instance.new("ImageLabel")
+local UICorner_5 = Instance.new("UICorner")
+local Close = Instance.new("ImageButton")
+local info = Instance.new("Frame")
+local UICorner_6 = Instance.new("UICorner")
+local time = Instance.new("TextLabel")
+local game = Instance.new("TextLabel")
 
 --Properties:
 
-BeeSS.Name = "BeeSS"
-BeeSS.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-BeeSS.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-BeeSS.ResetOnSpawn = false
+MBss.Name = "MBss"
+MBss.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+MBss.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-Bar.Name = "Bar"
-Bar.Parent = BeeSS
-Bar.AnchorPoint = Vector2.new(0.5, 0.5)
-Bar.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-Bar.Position = UDim2.new(0.5, 0, 0.307000011, 0)
-Bar.Size = UDim2.new(0, 608, 0, 33)
-Bar.ZIndex = 2
+MainBar.Name = "MainBar"
+MainBar.Parent = MBss
+MainBar.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+MainBar.Position = UDim2.new(0.245810062, 0, 0.285533011, 0)
+MainBar.Size = UDim2.new(0, 637, 0, 37)
+MainBar.ZIndex = 2
 
-UICorner.CornerRadius = UDim.new(0, 14)
-UICorner.Parent = Bar
+UICorner.CornerRadius = UDim.new(0, 10)
+UICorner.Parent = MainBar
 
 Flatten.Name = "Flatten"
-Flatten.Parent = Bar
-Flatten.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Flatten.Parent = MainBar
+Flatten.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
 Flatten.BorderSizePixel = 0
-Flatten.Position = UDim2.new(0, 0, 0.484848946, 0)
-Flatten.Size = UDim2.new(0, 608, 0, 16)
+Flatten.Position = UDim2.new(0, 0, 0.56756717, 0)
+Flatten.Size = UDim2.new(0, 637, 0, 16)
 Flatten.ZIndex = 2
 
-Game.Name = "Game"
-Game.Parent = Bar
-Game.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Game.BackgroundTransparency = 1.000
-Game.Position = UDim2.new(0.317434222, 0, 0.0303030312, 0)
-Game.Size = UDim2.new(0, 221, 0, 32)
-Game.ZIndex = 2
-Game.Font = Enum.Font.SourceSansBold
-Game.Text = "Bee Swarm Simulator"
-Game.TextColor3 = Color3.fromRGB(255, 255, 255)
-Game.TextSize = 16.000
+Back.Name = "Back"
+Back.Parent = MainBar
+Back.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
+Back.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Back.BorderSizePixel = 0
+Back.Position = UDim2.new(0, 0, 0.56756717, 0)
+Back.Size = UDim2.new(0, 637, 0, 349)
 
-Logo.Name = "Logo"
-Logo.Parent = Bar
-Logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Logo.BackgroundTransparency = 1.000
-Logo.Position = UDim2.new(0.0213815793, 0, 0.151515618, 0)
-Logo.Size = UDim2.new(0, 36, 0, 22)
-Logo.ZIndex = 2
-Logo.Image = "http://www.roblox.com/asset/?id=12690356012"
-
-MainBack.Name = "MainBack"
-MainBack.Parent = Bar
-MainBack.BackgroundColor3 = Color3.fromRGB(58, 58, 58)
-MainBack.BorderSizePixel = 0
-MainBack.Position = UDim2.new(0, 0, 0.484848976, 0)
-MainBack.Size = UDim2.new(0, 608, 0, 292)
-
-UICorner_2.CornerRadius = UDim.new(0, 14)
-UICorner_2.Parent = MainBack
-
-Tabs.Name = "Tabs"
-Tabs.Parent = MainBack
-Tabs.Active = true
-Tabs.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Tabs.BackgroundTransparency = 1.000
-Tabs.BorderSizePixel = 0
-Tabs.Position = UDim2.new(0, 0, 0.0900000036, 0)
-Tabs.Size = UDim2.new(0, 608, 0, 42)
-Tabs.CanvasSize = UDim2.new(2, 0, 0, 0)
-Tabs.HorizontalScrollBarInset = Enum.ScrollBarInset.Always
-Tabs.ScrollBarThickness = 0
-
-Info.Name = "Info"
-Info.Parent = Tabs
-Info.BackgroundColor3 = Color3.fromRGB(26, 26, 26)
-Info.Position = UDim2.new(0.0049342108, 0, 0.095238097, 0)
-Info.Size = UDim2.new(0, 141, 0, 33)
-Info.Font = Enum.Font.ArialBold
-Info.Text = "Info"
-Info.TextColor3 = Color3.fromRGB(255, 255, 255)
-Info.TextSize = 15.000
-Info.TextWrapped = true
-
-UICorner_3.Parent = Info
-
-Farm.Name = "Farm"
-Farm.Parent = Tabs
-Farm.BackgroundColor3 = Color3.fromRGB(26, 26, 26)
-Farm.Position = UDim2.new(0.130756572, 0, 0.095238097, 0)
-Farm.Size = UDim2.new(0, 141, 0, 33)
-Farm.Font = Enum.Font.ArialBold
-Farm.Text = "Farm"
-Farm.TextColor3 = Color3.fromRGB(255, 255, 255)
-Farm.TextSize = 15.000
-Farm.TextWrapped = true
-
-UICorner_4.Parent = Farm
-
-InfoTab.Name = "InfoTab"
-InfoTab.Parent = MainBack
-
-MainScroll.Name = "MainScroll"
-MainScroll.Parent = InfoTab
-MainScroll.Active = true
-MainScroll.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-MainScroll.BackgroundTransparency = 1.000
-MainScroll.BorderSizePixel = 0
-MainScroll.Position = UDim2.new(0.00999999978, 0, 0.259780824, 0)
-MainScroll.Size = UDim2.new(0, 595, 0, 208)
-MainScroll.CanvasSize = UDim2.new(0, 0, 3, 0)
-MainScroll.ScrollBarThickness = 5
-
-Unload.Name = "Unload"
-Unload.Parent = MainScroll
-Unload.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
-Unload.Position = UDim2.new(0.0252100844, 0, 0.00961538497, 0)
-Unload.Size = UDim2.new(0, 565, 0, 40)
-Unload.ZIndex = 2
-Unload.Font = Enum.Font.Gotham
-Unload.Text = "Unload GUI"
-Unload.TextColor3 = Color3.fromRGB(255, 255, 255)
-Unload.TextSize = 15.000
-
-UICorner_5.CornerRadius = UDim.new(0, 9)
-UICorner_5.Parent = Unload
-
-C.Name = "C"
-C.Parent = Unload
-C.AnchorPoint = Vector2.new(1, 0)
-C.BackgroundTransparency = 1.000
-C.LayoutOrder = 5
-C.Position = UDim2.new(0.988495588, 0, 0.175000012, 0)
-C.Size = UDim2.new(0, 25, 0, 25)
-C.ZIndex = 2
-C.Image = "rbxassetid://3926305904"
-C.ImageRectOffset = Vector2.new(164, 844)
-C.ImageRectSize = Vector2.new(36, 36)
-
-FarmTab.Name = "FarmTab"
-FarmTab.Parent = MainBack
-
-MainScroll_2.Name = "MainScroll"
-MainScroll_2.Parent = FarmTab
-MainScroll_2.Active = true
-MainScroll_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-MainScroll_2.BackgroundTransparency = 1.000
-MainScroll_2.BorderSizePixel = 0
-MainScroll_2.Position = UDim2.new(0.00999999978, 0, 0.259780824, 0)
-MainScroll_2.Size = UDim2.new(0, 595, 0, 208)
-MainScroll_2.Visible = false
-MainScroll_2.CanvasSize = UDim2.new(0, 0, 3, 0)
-MainScroll_2.ScrollBarThickness = 5
-
-q.Name = "q"
-q.Parent = MainScroll_2
-q.BackgroundColor3 = Color3.fromRGB(167, 167, 167)
-q.BorderSizePixel = 0
-q.Position = UDim2.new(0.0200840347, 0, 0.00999999978, 0)
-q.Size = UDim2.new(0, 570, 0, 1)
-
-qq.Name = "qq"
-qq.Parent = q
-qq.BackgroundColor3 = Color3.fromRGB(58, 58, 58)
-qq.BorderSizePixel = 0
-qq.Position = UDim2.new(0.463157892, 0, -12, 0)
-qq.Size = UDim2.new(0, 42, 0, 24)
-qq.Font = Enum.Font.SourceSans
-qq.Text = "Mobs"
-qq.TextColor3 = Color3.fromRGB(168, 168, 168)
-qq.TextSize = 14.000
-
-FSnail.Name = "FSnail"
-FSnail.Parent = MainScroll_2
-FSnail.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
-FSnail.Position = UDim2.new(0.0252100844, 0, 0.0288461559, 0)
-FSnail.Size = UDim2.new(0, 565, 0, 40)
-FSnail.ZIndex = 2
-FSnail.Font = Enum.Font.Gotham
-FSnail.Text = "Farm Snail"
-FSnail.TextColor3 = Color3.fromRGB(255, 255, 255)
-FSnail.TextSize = 15.000
-
-UICorner_6.CornerRadius = UDim.new(0, 9)
-UICorner_6.Parent = FSnail
-
-C_2.Name = "C"
-C_2.Parent = FSnail
-C_2.AnchorPoint = Vector2.new(1, 0)
-C_2.BackgroundTransparency = 1.000
-C_2.LayoutOrder = 5
-C_2.Position = UDim2.new(0.988495588, 0, 0.175000012, 0)
-C_2.Size = UDim2.new(0, 25, 0, 25)
-C_2.ZIndex = 2
-C_2.Image = "rbxassetid://3926305904"
-C_2.ImageRectOffset = Vector2.new(164, 844)
-C_2.ImageRectSize = Vector2.new(36, 36)
-
-Indicator.Name = "Indicator"
-Indicator.Parent = FSnail
-Indicator.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-Indicator.Position = UDim2.new(0, 10, 0.300000012, 0)
-Indicator.Size = UDim2.new(0, 15, 0, 15)
-
-UICorner_7.CornerRadius = UDim.new(10, 10)
-UICorner_7.Parent = Indicator
+UICorner_2.CornerRadius = UDim.new(0, 10)
+UICorner_2.Parent = Back
 
 BarShadow.Name = "BarShadow"
-BarShadow.Parent = Bar
+BarShadow.Parent = Back
 BarShadow.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 BarShadow.BackgroundTransparency = 1.000
-BarShadow.Position = UDim2.new(-0.0082236845, 0, 0.484848946, 0)
-BarShadow.Size = UDim2.new(0, 617, 0, 68)
-BarShadow.Visible = false
+BarShadow.BorderSizePixel = 0
+BarShadow.Position = UDim2.new(-0.00627943501, 0, 0.0229226369, 0)
+BarShadow.Size = UDim2.new(0, 645, 0, 36)
+BarShadow.ZIndex = 2
 BarShadow.Image = "http://www.roblox.com/asset/?id=12690998990"
+
+Selection.Name = "Selection"
+Selection.Parent = Back
+Selection.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Selection.ClipsDescendants = true
+Selection.Position = UDim2.new(0, 0, 0.0229226369, 0)
+Selection.Size = UDim2.new(0, 37, 0, 341)
+Selection.ZIndex = 2
+
+UICorner_3.Parent = Selection
+
+Flatten_2.Name = "Flatten"
+Flatten_2.Parent = Selection
+Flatten_2.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Flatten_2.BorderSizePixel = 0
+Flatten_2.Position = UDim2.new(0.869230747, 0, -0.000563612906, 0)
+Flatten_2.Size = UDim2.new(0, 17, 0, 333)
+
+Home.Name = "Home"
+Home.Parent = Selection
+Home.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Home.BackgroundTransparency = 1.000
+Home.ClipsDescendants = true
+Home.Position = UDim2.new(0.115384616, 0, 0.0540540554, 0)
+Home.Size = UDim2.new(0, 115, 0, 39)
+Home.Font = Enum.Font.SourceSansBold
+Home.Text = "Home"
+Home.TextColor3 = Color3.fromRGB(244, 244, 244)
+Home.TextSize = 17.000
+Home.TextWrapped = true
+
+Icons.Name = "Icons"
+Icons.Parent = Selection
+
+HI.Name = "HI"
+HI.Parent = Icons
+HI.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+HI.BackgroundTransparency = 1.000
+HI.Position = UDim2.new(0.100000001, 0, 0.0680000037, 0)
+HI.Size = UDim2.new(0, 28, 0, 28)
+HI.Image = "rbxassetid://3926305904"
+HI.ImageRectOffset = Vector2.new(964, 204)
+HI.ImageRectSize = Vector2.new(36, 36)
+
+FI.Name = "FI"
+FI.Parent = Icons
+FI.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FI.BackgroundTransparency = 1.000
+FI.Position = UDim2.new(0.100000001, 0, 0.185000002, 0)
+FI.Size = UDim2.new(0, 28, 0, 28)
+FI.Image = "rbxassetid://3926305904"
+FI.ImageRectOffset = Vector2.new(204, 964)
+FI.ImageRectSize = Vector2.new(36, 36)
+
+Farm.Name = "Farm"
+Farm.Parent = Selection
+Farm.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Farm.BackgroundTransparency = 1.000
+Farm.ClipsDescendants = true
+Farm.Position = UDim2.new(0.115384616, 0, 0.171171173, 0)
+Farm.Size = UDim2.new(0, 115, 0, 39)
+Farm.Font = Enum.Font.SourceSansBold
+Farm.Text = "Farm"
+Farm.TextColor3 = Color3.fromRGB(244, 244, 244)
+Farm.TextSize = 17.000
+Farm.TextWrapped = true
+
+Tabs.Name = "Tabs"
+Tabs.Parent = Back
+
+Home_2.Name = "Home"
+Home_2.Parent = Tabs
+Home_2.Active = true
+Home_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Home_2.BackgroundTransparency = 1.000
+Home_2.Position = UDim2.new(0.058084771, 0, 0.0458452739, 0)
+Home_2.Size = UDim2.new(0, 600, 0, 332)
+
+wuback.Name = "wuback"
+wuback.Parent = Home_2
+wuback.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+wuback.Position = UDim2.new(0.0199999996, 0, 0.0245953277, 0)
+wuback.Size = UDim2.new(0, 571, 0, 82)
+
+wu.Name = "wu"
+wu.Parent = wuback
+wu.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+wu.BackgroundTransparency = 1.000
+wu.Position = UDim2.new(0.173560992, 0, 0.345005125, 0)
+wu.Size = UDim2.new(0, 399, 0, 25)
+wu.Font = Enum.Font.Unknown
+wu.Text = "Welcome, John"
+wu.TextColor3 = Color3.fromRGB(255, 255, 255)
+wu.TextSize = 18.000
+wu.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_4.Parent = wuback
+
+wuicon.Name = "wuicon"
+wuicon.Parent = wuback
+wuicon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+wuicon.BackgroundTransparency = 1.000
+wuicon.Position = UDim2.new(0.0140105104, 0, 0.0609756112, 0)
+wuicon.Size = UDim2.new(0, 72, 0, 72)
+wuicon.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+UICorner_5.CornerRadius = UDim.new(1, 0)
+UICorner_5.Parent = wuicon
+
+Close.Name = "Close"
+Close.Parent = wuback
+Close.AnchorPoint = Vector2.new(1, 0)
+Close.BackgroundTransparency = 1.000
+Close.LayoutOrder = 5
+Close.Position = UDim2.new(0.952347517, 0, 0.341463417, 0)
+Close.Size = UDim2.new(0, 25, 0, 25)
+Close.ZIndex = 2
+Close.Image = "rbxassetid://3926305904"
+Close.ImageRectOffset = Vector2.new(4, 4)
+Close.ImageRectSize = Vector2.new(24, 24)
+
+info.Name = "info"
+info.Parent = Home_2
+info.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+info.Position = UDim2.new(0.0199999977, 0, 0.157581225, 0)
+info.Size = UDim2.new(0, 215, 0, 105)
+
+UICorner_6.Parent = info
+
+time.Name = "time"
+time.Parent = info
+time.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+time.BackgroundTransparency = 1.000
+time.Position = UDim2.new(0.367441863, 0, 0, 0)
+time.Size = UDim2.new(0, 56, 0, 32)
+time.Font = Enum.Font.Unknown
+time.Text = "00:00"
+time.TextColor3 = Color3.fromRGB(255, 255, 255)
+time.TextSize = 17.000
+
+game.Name = "game"
+game.Parent = info
+game.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+game.BackgroundTransparency = 1.000
+game.Position = UDim2.new(0.000751300191, 0, 0.304761916, 0)
+game.Size = UDim2.new(0, 214, 0, 32)
+game.Font = Enum.Font.Unknown
+game.Text = "game"
+game.TextColor3 = Color3.fromRGB(255, 255, 255)
+game.TextSize = 17.000
+game.TextWrapped = true
 
 -- Scripts:
 
-local function CIRRHJ_fake_script() -- BeeSS.Main 
-	local script = Instance.new('LocalScript', BeeSS)
+local function VQZZ_fake_script() -- MBss.Main 
+	local script = Instance.new('LocalScript', MBss)
 
-	--toggle
+	--Setup
+	
 	local uis = game:GetService("UserInputService")
-	uis.InputBegan:Connect(function(q)
-		if q.KeyCode == Enum.KeyCode.Insert then
-			if script.Parent.Bar.Visible == true then
-				script.Parent.Bar.Visible = false
-			else
-				script.Parent.Bar.Visible = true
-			end
-		end
-	end)
-end
-coroutine.wrap(CIRRHJ_fake_script)()
-local function ZVFT_fake_script() -- Unload.UnloadS 
-	local script = Instance.new('LocalScript', Unload)
-
-	local button = script.Parent
+	local tweenservice = game:GetService("TweenService")
 	
-	button.MouseButton1Up:Connect(function()
-		button.Parent.Parent.Parent.Parent.Parent:Destroy()
-	end)
-end
-coroutine.wrap(ZVFT_fake_script)()
-local function XMYWQ_fake_script() -- FSnail.SF 
-	local script = Instance.new('LocalScript', FSnail)
-
-	local button = script.Parent
-	local ind = button.Indicator
-	local toggle = false
 	
-	button.MouseButton1Up:Connect(function()
-		if toggle then
-			toggle = false
-			ind.BackgroundColor3 = Color3.new(1, 0, 0)
-		else
-			toggle = true
-			ind.BackgroundColor3 = Color3.new(0, 1, 0)
-		end
+	--Player
+	
+	local players = game:GetService("Players")
+	local player = players.LocalPlayer
+	local char = player.Character
+	local mouse = player:GetMouse()
+	
+	
+	--Gui vars
+	
+	local Gui = script.Parent
+	local TabSelection = Gui.MainBar.Back.Selection
+	
+	local HomeTab = Gui.MainBar.Back.Tabs.Home
+	local wut = HomeTab.wuback.wu
+	local wuicon = HomeTab.wuback.wuicon
+	local t = HomeTab.info.time
+	local g = HomeTab.info.game
+	local close = HomeTab.wuback.Close
+	
+	
+	--Animations
+	
+	local minin = tweenservice:Create(TabSelection,TweenInfo.new(.5,Enum.EasingStyle.Quart,Enum.EasingDirection.Out),{Size = UDim2.new(0, 37,0, 333)})
+	local minout = tweenservice:Create(TabSelection,TweenInfo.new(.5,Enum.EasingStyle.Quart,Enum.EasingDirection.Out),{Size = UDim2.new(0, 130,0, 333)})
+	
+	TabSelection.MouseEnter:Connect(function()
+		minout:Play()
+	end)
+	TabSelection.MouseLeave:Connect(function()
+		minin:Play()
 	end)
 	
-	--tokens
-	local i = "rbxassetid://2319083910" --impale
-	local r = "rbxassetid://1442700745" --rage
 	
-	local f = game.Workspace:FindFirstChild("Collectibles")
-	local h = game.Players.LocalPlayer.Character.Humanoid
+	--Dragable
 	
-	local function fp()
-		if f then
-			for _, p in ipairs(f:GetChildren()) do
-				if p:IsA("BasePart") and p:FindFirstChild("FrontDecal") then
-					local d = p.FrontDecal
-					if d and d:IsA("Decal") and d.Texture == i or r then
-						return p
-					end
-				end
-			end
-		end
-		return nil
-	end
-	
-	local function mhp(p)
-		if p then
-			h:MoveTo(p.Position)
-			h.MoveToFinished:Connect(function()
-				h:MoveTo(Vector3.new(424, 97, -175))
-			end)
-		end
-	end
-	
-	while toggle do
-		if not toggle then
-			break
-		end
-		local mp = fp()
-		if mp then
-			mhp(mp)
-		end
-		wait(1)
-	end
-end
-coroutine.wrap(XMYWQ_fake_script)()
-local function SMPD_fake_script() -- MainBack.TabSwitch 
-	local script = Instance.new('LocalScript', MainBack)
-
-	--Info
-	local InfoB = script.Parent.Tabs.Info
-	local InfoT = script.Parent.InfoTab
-	--Farm
-	local FarmB = script.Parent.Tabs.Farm
-	local FarmT = script.Parent.FarmTab
-	
-	
-	
-	--Info Function
-	local function i()
-		InfoT.MainScroll.Visible = true
-		FarmT.MainScroll.Visible = false
-	end
-	
-	--Farm Function
-	local function f()
-		InfoT.MainScroll.Visible = false
-		FarmT.MainScroll.Visible = true
-	end
-	
-	
-	InfoB.MouseButton1Up:Connect(i)
-	FarmB.MouseButton1Up:Connect(f)
-end
-coroutine.wrap(SMPD_fake_script)()
-local function VRWISA_fake_script() -- Bar.Drag 
-	local script = Instance.new('LocalScript', Bar)
-
-	local UserInputService = game:GetService("UserInputService")
-	
-	local gui = script.Parent
+	local d = Gui.MainBar
 	
 	local dragging
 	local dragInput
@@ -374,14 +283,14 @@ local function VRWISA_fake_script() -- Bar.Drag
 	
 	local function update(input)
 		local delta = input.Position - dragStart
-		gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		d.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
 	end
 	
-	gui.InputBegan:Connect(function(input)
+	d.InputBegan:Connect(function(input)
 		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
 			dragging = true
 			dragStart = input.Position
-			startPos = gui.Position
+			startPos = d.Position
 	
 			input.Changed:Connect(function()
 				if input.UserInputState == Enum.UserInputState.End then
@@ -391,16 +300,35 @@ local function VRWISA_fake_script() -- Bar.Drag
 		end
 	end)
 	
-	gui.InputChanged:Connect(function(input)
+	d.InputChanged:Connect(function(input)
 		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
 			dragInput = input
 		end
 	end)
 	
-	UserInputService.InputChanged:Connect(function(input)
+	uis.InputChanged:Connect(function(input)
 		if input == dragInput and dragging then
 			update(input)
 		end
 	end)
+	
+	
+	--Home
+	
+	close.MouseButton1Up:Connect(function()
+		Gui:Destroy()
+	end)
+	
+	wut.Text = "Welcome, "..player.DisplayName
+	
+	wuicon.Image = players:GetUserThumbnailAsync(player.UserId,Enum.ThumbnailType.HeadShot,Enum.ThumbnailSize.Size420x420)
+	
+	coroutine.wrap(function()
+		while task.wait() do
+			t.Text = os.date("*t")["hour"]..":"..os.date("*t")["min"]
+		end
+	end)()
+	
+	g.Text = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
 end
-coroutine.wrap(VRWISA_fake_script)()
+coroutine.wrap(VQZZ_fake_script)()
