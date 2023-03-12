@@ -1,3 +1,7 @@
+-- Generated using RoadToGlory's Converter v1.1 (RoadToGlory#9879)
+
+-- Instances:
+
 local Converted = {
 	["_MBss"] = Instance.new("ScreenGui");
 	["_MainBar"] = Instance.new("Frame");
@@ -364,7 +368,7 @@ local fake_module_scripts = {}
 
 -- Fake Local Scripts:
 
-local function LAFJEFL_fake_script() -- Fake Script: StarterGui.MBss.Main
+local function WGWCTN_fake_script() -- Fake Script: StarterGui.MBss.Main
     local script = Instance.new("LocalScript")
     script.Name = "Main"
     script.Parent = Converted["_MBss"]
@@ -388,6 +392,7 @@ local function LAFJEFL_fake_script() -- Fake Script: StarterGui.MBss.Main
 	local player = players.LocalPlayer
 	local char = player.Character
 	local mouse = player:GetMouse()
+	local h = game.Players.LocalPlayer.Character.Humanoid
 	
 	
 	--Gui vars
@@ -410,6 +415,9 @@ local function LAFJEFL_fake_script() -- Fake Script: StarterGui.MBss.Main
 	local g = HomeTab.info.game
 	local close = HomeTab.wuback.Close
 	local hb = Gui.Off.Mo.HB
+	
+	local FSnailB = FarmTab.MBa.FarmSnail
+	local FSI = FSnailB.ind
 	
 	
 	--Animations
@@ -529,11 +537,66 @@ local function LAFJEFL_fake_script() -- Fake Script: StarterGui.MBss.Main
 	
 	coroutine.wrap(function()
 		while task.wait() do
-			t.Text = os.date("*t")["hour"]..":"..os.date("*t")["min"]
+			t.Text = string.format("%0.2i", os.date("*t")["hour"])..":"..string.format("%0.2i", os.date("*t")["min"])
 		end
 	end)()
 	
 	g.Text = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
+	
+	
+	--Farm
+	
+	local i = "rbxassetid://2319083910"
+	local f = game.Workspace:FindFirstChild("Collectibles")
+	local snailtoggle = false
+	
+	FSnailB.MouseButton1Up:Connect(function()
+		if not snailtoggle then
+			snailtoggle = true
+			FSI.BackgroundColor3 = Color3.fromRGB(0,200,0)
+		else
+			snailtoggle = false
+			FSI.BackgroundColor3 = Color3.fromRGB(161,0,0)
+		end
+	end)
+	
+	local function fp()
+		if f then
+			for _, p in ipairs(f:GetChildren()) do
+				if p:IsA("BasePart") and p:FindFirstChild("FrontDecal") then
+					local d = p.FrontDecal
+					if d and d:IsA("Decal") then
+						if d.Texture == i then
+							return p
+						end
+					end
+				end
+			end
+		end
+		return nil
+	end
+	
+	local function mhp(p)
+		if p then
+			h:MoveTo(p.Position)
+			h.MoveToFinished:Connect(function()
+				h:MoveTo(Vector3.new(424, 97, -175))
+			end)
+		end
+	end
+	
+	coroutine.wrap(function()
+		while snailtoggle do
+			if not snailtoggle then
+				break
+			end
+			local mp = fp()
+			if mp then
+				mhp(mp)
+			end
+			wait(2)
+		end
+	end)()
 end
 
-coroutine.wrap(LAFJEFL_fake_script)()
+coroutine.wrap(WGWCTN_fake_script)()
