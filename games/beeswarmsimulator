@@ -1,7 +1,3 @@
--- Generated using RoadToGlory's Converter v1.1 (RoadToGlory#9879)
-
--- Instances:
-
 local Converted = {
 	["_MBss"] = Instance.new("ScreenGui");
 	["_MainBar"] = Instance.new("Frame");
@@ -31,10 +27,18 @@ local Converted = {
 	["_info"] = Instance.new("Frame");
 	["_UICorner5"] = Instance.new("UICorner");
 	["_game"] = Instance.new("TextLabel");
+	["_Farm1"] = Instance.new("ScrollingFrame");
+	["_MBa"] = Instance.new("Frame");
+	["_UICorner6"] = Instance.new("UICorner");
+	["_MT"] = Instance.new("TextLabel");
+	["_FarmSnail"] = Instance.new("TextButton");
+	["_UICorner7"] = Instance.new("UICorner");
+	["_ind"] = Instance.new("Frame");
+	["_UICorner8"] = Instance.new("UICorner");
 	["_Main"] = Instance.new("LocalScript");
 	["_Off"] = Instance.new("Folder");
 	["_Mo"] = Instance.new("Frame");
-	["_UICorner6"] = Instance.new("UICorner");
+	["_UICorner9"] = Instance.new("UICorner");
 	["_UIGradient"] = Instance.new("UIGradient");
 	["_time"] = Instance.new("TextLabel");
 	["_MIcon"] = Instance.new("ImageLabel");
@@ -131,6 +135,7 @@ Converted["_HI"].Name = "HI"
 Converted["_HI"].Parent = Converted["_Icons"]
 
 Converted["_FI"].Image = "rbxassetid://3926305904"
+Converted["_FI"].ImageColor3 = Color3.fromRGB(200.00001847743988, 200.00001847743988, 200.00001847743988)
 Converted["_FI"].ImageRectOffset = Vector2.new(204, 964)
 Converted["_FI"].ImageRectSize = Vector2.new(36, 36)
 Converted["_FI"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -141,6 +146,7 @@ Converted["_FI"].Name = "FI"
 Converted["_FI"].Parent = Converted["_Icons"]
 
 Converted["_PI"].Image = "rbxassetid://3926307971"
+Converted["_PI"].ImageColor3 = Color3.fromRGB(200.00001847743988, 200.00001847743988, 200.00001847743988)
 Converted["_PI"].ImageRectOffset = Vector2.new(884, 4)
 Converted["_PI"].ImageRectSize = Vector2.new(36, 36)
 Converted["_PI"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -254,6 +260,57 @@ Converted["_game"].Size = UDim2.new(0, 204, 0, 32)
 Converted["_game"].Name = "game"
 Converted["_game"].Parent = Converted["_info"]
 
+Converted["_Farm1"].ScrollBarImageColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Farm1"].ScrollBarImageTransparency = 1
+Converted["_Farm1"].Active = true
+Converted["_Farm1"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Farm1"].BackgroundTransparency = 1
+Converted["_Farm1"].Position = UDim2.new(0.058084771, 0, 0.0458452739, 0)
+Converted["_Farm1"].Size = UDim2.new(0, 600, 0, 332)
+Converted["_Farm1"].Visible = false
+Converted["_Farm1"].Name = "Farm"
+Converted["_Farm1"].Parent = Converted["_Tabs"]
+
+Converted["_MBa"].BackgroundColor3 = Color3.fromRGB(56.000000461936, 56.000000461936, 56.000000461936)
+Converted["_MBa"].Position = UDim2.new(0.0199999996, 0, 0.0194966868, 0)
+Converted["_MBa"].Size = UDim2.new(0, 187, 0, 191)
+Converted["_MBa"].Name = "MBa"
+Converted["_MBa"].Parent = Converted["_Farm1"]
+
+Converted["_UICorner6"].Parent = Converted["_MBa"]
+
+Converted["_MT"].Font = Enum.Font.GothamMedium
+Converted["_MT"].Text = "Mobs"
+Converted["_MT"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_MT"].TextSize = 14
+Converted["_MT"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_MT"].BackgroundTransparency = 1
+Converted["_MT"].Position = UDim2.new(0.336898386, 0, 0.0157068074, 0)
+Converted["_MT"].Size = UDim2.new(0, 61, 0, 28)
+Converted["_MT"].Name = "MT"
+Converted["_MT"].Parent = Converted["_MBa"]
+
+Converted["_FarmSnail"].Font = Enum.Font.Gotham
+Converted["_FarmSnail"].Text = "Farm Snail"
+Converted["_FarmSnail"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_FarmSnail"].TextSize = 12
+Converted["_FarmSnail"].BackgroundColor3 = Color3.fromRGB(43.00000123679638, 43.00000123679638, 43.00000123679638)
+Converted["_FarmSnail"].Position = UDim2.new(0.053475935, 0, 0.214659691, 0)
+Converted["_FarmSnail"].Size = UDim2.new(0, 167, 0, 40)
+Converted["_FarmSnail"].Name = "FarmSnail"
+Converted["_FarmSnail"].Parent = Converted["_MBa"]
+
+Converted["_UICorner7"].Parent = Converted["_FarmSnail"]
+
+Converted["_ind"].BackgroundColor3 = Color3.fromRGB(161.0000056028366, 0, 0)
+Converted["_ind"].Position = UDim2.new(0.0658682585, 0, 0.375, 0)
+Converted["_ind"].Size = UDim2.new(0, 10, 0, 10)
+Converted["_ind"].Name = "ind"
+Converted["_ind"].Parent = Converted["_FarmSnail"]
+
+Converted["_UICorner8"].CornerRadius = UDim.new(1, 1)
+Converted["_UICorner8"].Parent = Converted["_ind"]
+
 Converted["_Off"].Name = "Off"
 Converted["_Off"].Parent = Converted["_MBss"]
 
@@ -264,8 +321,8 @@ Converted["_Mo"].Size = UDim2.new(0, 136, 0, 69)
 Converted["_Mo"].Name = "Mo"
 Converted["_Mo"].Parent = Converted["_Off"]
 
-Converted["_UICorner6"].CornerRadius = UDim.new(0, 10)
-Converted["_UICorner6"].Parent = Converted["_Mo"]
+Converted["_UICorner9"].CornerRadius = UDim.new(0, 10)
+Converted["_UICorner9"].Parent = Converted["_Mo"]
 
 Converted["_UIGradient"].Color = ColorSequence.new{
 	ColorSequenceKeypoint.new(0, Color3.fromRGB(176.00000470876694, 176.00000470876694, 176.00000470876694)),
@@ -307,7 +364,7 @@ local fake_module_scripts = {}
 
 -- Fake Local Scripts:
 
-local function MSDQ_fake_script() -- Fake Script: StarterGui.MBss.Main
+local function LAFJEFL_fake_script() -- Fake Script: StarterGui.MBss.Main
     local script = Instance.new("LocalScript")
     script.Name = "Main"
     script.Parent = Converted["_MBss"]
@@ -339,7 +396,14 @@ local function MSDQ_fake_script() -- Fake Script: StarterGui.MBss.Main
 	local TabSelection = Gui.MainBar.Back.Selection
 	
 	local MainBar = Gui.MainBar
+	
 	local HomeTab = MainBar.Back.Tabs.Home
+	local SwitchHome = MainBar.Back.Selection.Home
+	local HomeI = MainBar.Back.Selection.Icons.HI
+	local FarmTab = MainBar.Back.Tabs.Farm
+	local SwitchFarm = MainBar.Back.Selection.Farm
+	local FarmI = MainBar.Back.Selection.Icons.FI
+	
 	local wut = HomeTab.wuback.wu
 	local wuicon = HomeTab.wuback.wuicon
 	local t = Gui.Off.Mo.time
@@ -427,6 +491,32 @@ local function MSDQ_fake_script() -- Fake Script: StarterGui.MBss.Main
 	end)
 	
 	
+	--Tab Switch
+	
+	local function mainh()
+		HomeTab.Visible = false
+		HomeI.ImageColor3 = Color3.fromRGB(200,200,200)
+		FarmTab.Visible = false
+		FarmI.ImageColor3 = Color3.fromRGB(200,200,200)
+	end
+	
+	local function sh()
+		mainh()
+		HomeTab.Visible = true
+		HomeI.ImageColor3 = Color3.fromRGB(255,255,255)
+	end
+	
+	local function sf()
+		mainh()
+		FarmTab.Visible = true
+		FarmI.ImageColor3 = Color3.fromRGB(255,255,255)
+	end
+	
+	
+	SwitchHome.MouseButton1Up:Connect(sh)
+	SwitchFarm.MouseButton1Up:Connect(sf)
+	
+	
 	--Home
 	
 	close.MouseButton1Up:Connect(function()
@@ -446,4 +536,4 @@ local function MSDQ_fake_script() -- Fake Script: StarterGui.MBss.Main
 	g.Text = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
 end
 
-coroutine.wrap(MSDQ_fake_script)()
+coroutine.wrap(LAFJEFL_fake_script)()
