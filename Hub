@@ -1,3 +1,10 @@
+if game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Load") then
+	game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage", {Text = " Hub already running!",Color = Color3.fromRGB(200, 0, 0),Font = Enum.Font.SourceSansBold, TextSize = 18})
+	return
+end
+
+
+
 -- Gui to Lua
 -- Version: 3.2
 
@@ -56,13 +63,13 @@ local function DGVFP_fake_script() -- MainLoad.Main
 	local logo = script.Parent.Logo
 	local back = script.Parent.Parent.MainLoad
 	local lt = script.Parent.LT
-	
+
 	local ts = game:GetService("TweenService")
-	
+
 	local backa = ts:Create(back,TweenInfo.new(1.3,Enum.EasingStyle.Quart,Enum.EasingDirection.Out),{BackgroundTransparency = 0})
 	local logoa = ts:Create(logo,TweenInfo.new(1.3,Enum.EasingStyle.Quart,Enum.EasingDirection.Out),{ImageTransparency = 0})
 	local lta = ts:Create(lt,TweenInfo.new(1.7,Enum.EasingStyle.Quart,Enum.EasingDirection.Out),{TextTransparency = 0})
-	
+
 	backa:Play()
 	logoa:Play()
 	lta:Play()
