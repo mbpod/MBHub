@@ -368,7 +368,7 @@ local fake_module_scripts = {}
 
 -- Fake Local Scripts:
 
-local function TPXP_fake_script() -- Fake Script: StarterGui.MBss.Main
+local function QGKUGZQ_fake_script() -- Fake Script: StarterGui.MBss.Main
     local script = Instance.new("LocalScript")
     script.Name = "Main"
     script.Parent = Converted["_MBss"]
@@ -382,8 +382,6 @@ local function TPXP_fake_script() -- Fake Script: StarterGui.MBss.Main
     end
 
 	--Setup
-	
-	game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage", {Text = " Please wait...",Color = Color3.fromRGB(216, 126, 255),Font = Enum.Font.SourceSansBold, TextSize = 18})
 	
 	local uis = game:GetService("UserInputService")
 	local tweenservice = game:GetService("TweenService")
@@ -420,6 +418,11 @@ local function TPXP_fake_script() -- Fake Script: StarterGui.MBss.Main
 	
 	local FSnailB = FarmTab.MBa.FarmSnail
 	local FSI = FSnailB.ind
+	
+	
+	--
+	
+	game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage", {Text = " Please wait...",Color = Color3.fromRGB(216, 126, 255),Font = Enum.Font.SourceSansBold, TextSize = 18})
 	
 	
 	--Animations
@@ -658,4 +661,4 @@ local function TPXP_fake_script() -- Fake Script: StarterGui.MBss.Main
 	end)()
 end
 
-coroutine.wrap(TPXP_fake_script)()
+coroutine.wrap(QGKUGZQ_fake_script)()
