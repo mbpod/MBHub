@@ -368,7 +368,7 @@ local fake_module_scripts = {}
 
 -- Fake Local Scripts:
 
-local function LPCFQRG_fake_script() -- Fake Script: StarterGui.MBss.Main
+local function TPXP_fake_script() -- Fake Script: StarterGui.MBss.Main
     local script = Instance.new("LocalScript")
     script.Name = "Main"
     script.Parent = Converted["_MBss"]
@@ -382,6 +382,8 @@ local function LPCFQRG_fake_script() -- Fake Script: StarterGui.MBss.Main
     end
 
 	--Setup
+	
+	game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage", {Text = " Please wait...",Color = Color3.fromRGB(216, 126, 255),Font = Enum.Font.SourceSansBold, TextSize = 18})
 	
 	local uis = game:GetService("UserInputService")
 	local tweenservice = game:GetService("TweenService")
@@ -424,13 +426,10 @@ local function LPCFQRG_fake_script() -- Fake Script: StarterGui.MBss.Main
 	
 	local loadinmain = tweenservice:Create(MainBar,TweenInfo.new(1.2,Enum.EasingStyle.Quart,Enum.EasingDirection.Out),{Position = UDim2.new(0.25,0,0.05,0)})
 	local loadinoff = tweenservice:Create(Gui.Off.Mo,TweenInfo.new(1,Enum.EasingStyle.Quart,Enum.EasingDirection.Out),{Position = UDim2.new(0.007, 0,0.904, 0)})
-	wait(3)
+	wait(7)
 	loadinmain:Play()
 	loadinmain.Completed:Wait()
 	loadinoff:Play()
-	
-	local closeanimmain = tweenservice:Create(MainBar,TweenInfo.new(1,Enum.EasingStyle.Quart,Enum.EasingDirection.Out),{Position = UDim2.new(0.25,0,1.25,0)})
-	local closeanimoff = tweenservice:Create(Gui.Off.Mo,TweenInfo.new(1,Enum.EasingStyle.Quart,Enum.EasingDirection.Out),{Position = UDim2.new(0.007, 0,1.05, 0)})
 	
 	local minin = tweenservice:Create(TabSelection,TweenInfo.new(.5,Enum.EasingStyle.Quart,Enum.EasingDirection.Out),{Size = UDim2.new(0, 37,0, 341)})
 	local minout = tweenservice:Create(TabSelection,TweenInfo.new(.5,Enum.EasingStyle.Quart,Enum.EasingDirection.Out),{Size = UDim2.new(0, 130,0, 341)})
@@ -582,6 +581,8 @@ local function LPCFQRG_fake_script() -- Fake Script: StarterGui.MBss.Main
 	--Home
 	
 	close.MouseButton1Up:Connect(function()
+		local closeanimmain = tweenservice:Create(MainBar,TweenInfo.new(1,Enum.EasingStyle.Quart,Enum.EasingDirection.Out),{Position = UDim2.new(MainBar.Position.X,0,1.25,0)})
+		local closeanimoff = tweenservice:Create(Gui.Off.Mo,TweenInfo.new(1,Enum.EasingStyle.Quart,Enum.EasingDirection.Out),{Position = UDim2.new(0.007, 0,1.05, 0)})
 		closeanimmain:Play()
 		closeanimoff:Play()
 		closeanimoff.Completed:Wait()
@@ -657,4 +658,4 @@ local function LPCFQRG_fake_script() -- Fake Script: StarterGui.MBss.Main
 	end)()
 end
 
-coroutine.wrap(LPCFQRG_fake_script)()
+coroutine.wrap(TPXP_fake_script)()
