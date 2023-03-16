@@ -51,7 +51,7 @@ LT.TextTransparency = 1.000
 
 local function DGVFP_fake_script() -- MainLoad.Main 
 	local script = Instance.new('LocalScript', MainLoad)
-
+	game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage", {Text = " Welcome to MBHub!",Color = Color3.fromRGB(183, 0, 255),Font = Enum.Font.SourceSansBold, TextSize = 18})
 	--anim
 	local logo = script.Parent.Logo
 	local back = script.Parent.Parent.MainLoad
@@ -71,6 +71,7 @@ local function DGVFP_fake_script() -- MainLoad.Main
 		wait(.3)
 		if game.PlaceId == 1537690962 then --bss
 			lt.Text = "Game found: Bee Swarm Simulator"
+			game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage", {Text = " Loading Bee Swarm Simulator!",Color = Color3.fromRGB(183, 0, 255),Font = Enum.Font.SourceSansBold, TextSize = 18})
 			wait(1)
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/MBP0/MBHub/main/games/beeswarmsimulator"))()
 			script.Parent.Parent:Destroy()
