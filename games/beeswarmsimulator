@@ -368,7 +368,7 @@ local fake_module_scripts = {}
 
 -- Fake Local Scripts:
 
-local function GQHKLJC_fake_script() -- Fake Script: StarterGui.MBss.Main
+local function LPCFQRG_fake_script() -- Fake Script: StarterGui.MBss.Main
     local script = Instance.new("LocalScript")
     script.Name = "Main"
     script.Parent = Converted["_MBss"]
@@ -422,11 +422,15 @@ local function GQHKLJC_fake_script() -- Fake Script: StarterGui.MBss.Main
 	
 	--Animations
 	
-	local loadinmain = tweenservice:Create(MainBar,TweenInfo.new(1.2,Enum.EasingStyle.Quart,Enum.EasingDirection.Out),{Position = UDim2.new(0.25,0,0.25,0)})
+	local loadinmain = tweenservice:Create(MainBar,TweenInfo.new(1.2,Enum.EasingStyle.Quart,Enum.EasingDirection.Out),{Position = UDim2.new(0.25,0,0.05,0)})
 	local loadinoff = tweenservice:Create(Gui.Off.Mo,TweenInfo.new(1,Enum.EasingStyle.Quart,Enum.EasingDirection.Out),{Position = UDim2.new(0.007, 0,0.904, 0)})
+	wait(3)
 	loadinmain:Play()
 	loadinmain.Completed:Wait()
 	loadinoff:Play()
+	
+	local closeanimmain = tweenservice:Create(MainBar,TweenInfo.new(1,Enum.EasingStyle.Quart,Enum.EasingDirection.Out),{Position = UDim2.new(0.25,0,1.25,0)})
+	local closeanimoff = tweenservice:Create(Gui.Off.Mo,TweenInfo.new(1,Enum.EasingStyle.Quart,Enum.EasingDirection.Out),{Position = UDim2.new(0.007, 0,1.05, 0)})
 	
 	local minin = tweenservice:Create(TabSelection,TweenInfo.new(.5,Enum.EasingStyle.Quart,Enum.EasingDirection.Out),{Size = UDim2.new(0, 37,0, 341)})
 	local minout = tweenservice:Create(TabSelection,TweenInfo.new(.5,Enum.EasingStyle.Quart,Enum.EasingDirection.Out),{Size = UDim2.new(0, 130,0, 341)})
@@ -505,6 +509,38 @@ local function GQHKLJC_fake_script() -- Fake Script: StarterGui.MBss.Main
 	end)
 	
 	
+	--load
+	
+	local function beeesp(on)
+		local id = game:GetService("Players").localPlayer.UserId
+		local beefolder = game:GetService("Workspace").Bees
+		local bees = beefolder:GetDescendants()
+		
+		if on == true then
+			for _, bee in ipairs(bees) do
+				if bee:IsA("BasePart") and bee:FindFirstChild("OwnerId") then
+					if bee.OwnerId.Value == id then
+						local a = Instance.new("Highlight")
+						a.FillColor = Color3.fromRGB(200, 0, 255)
+						a.FillTransparency = 0.7
+						a.OutlineColor = Color3.fromRGB(182, 0, 232)
+						a.Parent = bee
+					end
+				end
+			end
+		elseif on == false then
+			for _, bee in ipairs(bees) do
+				if bee:IsA("BasePart") and bee:FindFirstChild("OwnerId") then
+					if bee.OwnerId.Value == id then
+						bee.Highlight:Destroy()
+					end
+				end
+			end
+		end
+	end
+	
+	beeesp(true)
+	
 	--Functions
 	
 	local function PlaceSplinkers()
@@ -546,6 +582,10 @@ local function GQHKLJC_fake_script() -- Fake Script: StarterGui.MBss.Main
 	--Home
 	
 	close.MouseButton1Up:Connect(function()
+		closeanimmain:Play()
+		closeanimoff:Play()
+		closeanimoff.Completed:Wait()
+		beeesp(false)
 		Gui:Destroy()
 	end)
 	
@@ -617,4 +657,4 @@ local function GQHKLJC_fake_script() -- Fake Script: StarterGui.MBss.Main
 	end)()
 end
 
-coroutine.wrap(GQHKLJC_fake_script)()
+coroutine.wrap(LPCFQRG_fake_script)()
