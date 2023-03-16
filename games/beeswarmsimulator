@@ -56,7 +56,7 @@ Converted["_MBss"].Name = "MBss"
 Converted["_MBss"].Parent = game:GetService("CoreGui")
 
 Converted["_MainBar"].BackgroundColor3 = Color3.fromRGB(45.00000111758709, 45.00000111758709, 45.00000111758709)
-Converted["_MainBar"].Position = UDim2.new(0.245810062, 0, 0.285533011, 0)
+Converted["_MainBar"].Position = UDim2.new(0.25, 0, 1.04999995, 0)
 Converted["_MainBar"].Size = UDim2.new(0, 637, 0, 37)
 Converted["_MainBar"].ZIndex = 2
 Converted["_MainBar"].Name = "MainBar"
@@ -320,7 +320,7 @@ Converted["_Off"].Parent = Converted["_MBss"]
 
 Converted["_Mo"].BackgroundColor3 = Color3.fromRGB(62.00000390410423, 62.00000390410423, 62.00000390410423)
 Converted["_Mo"].ClipsDescendants = true
-Converted["_Mo"].Position = UDim2.new(0.00703096902, 0, 0.903553307, 0)
+Converted["_Mo"].Position = UDim2.new(0.00700000022, 0, 1.04999995, 0)
 Converted["_Mo"].Size = UDim2.new(0, 136, 0, 69)
 Converted["_Mo"].Name = "Mo"
 Converted["_Mo"].Parent = Converted["_Off"]
@@ -368,7 +368,7 @@ local fake_module_scripts = {}
 
 -- Fake Local Scripts:
 
-local function WGWCTN_fake_script() -- Fake Script: StarterGui.MBss.Main
+local function GQHKLJC_fake_script() -- Fake Script: StarterGui.MBss.Main
     local script = Instance.new("LocalScript")
     script.Name = "Main"
     script.Parent = Converted["_MBss"]
@@ -421,6 +421,12 @@ local function WGWCTN_fake_script() -- Fake Script: StarterGui.MBss.Main
 	
 	
 	--Animations
+	
+	local loadinmain = tweenservice:Create(MainBar,TweenInfo.new(1.2,Enum.EasingStyle.Quart,Enum.EasingDirection.Out),{Position = UDim2.new(0.25,0,0.25,0)})
+	local loadinoff = tweenservice:Create(Gui.Off.Mo,TweenInfo.new(1,Enum.EasingStyle.Quart,Enum.EasingDirection.Out),{Position = UDim2.new(0.007, 0,0.904, 0)})
+	loadinmain:Play()
+	loadinmain.Completed:Wait()
+	loadinoff:Play()
 	
 	local minin = tweenservice:Create(TabSelection,TweenInfo.new(.5,Enum.EasingStyle.Quart,Enum.EasingDirection.Out),{Size = UDim2.new(0, 37,0, 341)})
 	local minout = tweenservice:Create(TabSelection,TweenInfo.new(.5,Enum.EasingStyle.Quart,Enum.EasingDirection.Out),{Size = UDim2.new(0, 130,0, 341)})
@@ -497,6 +503,18 @@ local function WGWCTN_fake_script() -- Fake Script: StarterGui.MBss.Main
 			hb.Size = UDim2.new(0,h,0,2)
 		end
 	end)
+	
+	
+	--Functions
+	
+	local function PlaceSplinkers()
+		for i=1,3 do
+			h.Jump = true
+			wait(.2)
+			game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("PlayerActivesCommand"):FireServer(unpack({[1] = {["Name"] = "Sprinkler Builder"}}))
+			wait(1)
+		end
+	end
 	
 	
 	--Tab Switch
@@ -599,4 +617,4 @@ local function WGWCTN_fake_script() -- Fake Script: StarterGui.MBss.Main
 	end)()
 end
 
-coroutine.wrap(WGWCTN_fake_script)()
+coroutine.wrap(GQHKLJC_fake_script)()
